@@ -25,9 +25,7 @@
   .swiper {
     padding: 30px !important;
     @media screen and (max-width: 767.98px) {
-      padding-left: calc(
-        (100% - clamp(480px, vw(1390), 1390px) + 20px) / 2
-      ) !important;
+      padding-left: calc((100% - clamp(480px, vw(1390), 1390px) + 20px) / 2) !important;
       @media screen and (max-width: 550px) {
         padding-left: calc(clamp(rem(21), vw(74), rem(85)) + 30px) !important;
       }
@@ -84,7 +82,7 @@
       width: 100%;
     }
     @media screen and (min-width: 1024.02px) {
-      max-width: 1111px;
+      max-width: 1200px;
     }
   }
 }

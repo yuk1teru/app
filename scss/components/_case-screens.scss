@@ -3,6 +3,11 @@
   @media screen and (max-width: 1024px) {
     margin-top: clamp(rem(70), vw(120), rem(120));
   }
+  .container {
+    @media screen and (min-width: 1024.02px) {
+      max-width: 1130px;
+    }
+  }
   &__text {
     color: #848382;
     font-size: 14px;
