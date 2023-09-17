@@ -38,8 +38,8 @@
     justify-content: space-between;
 
     p {
-      // padding-top: clamp(rem(25), vw(39), rem(39));
-      padding-top: 30px;
+      padding-top: clamp(rem(25), vw(39), rem(39));
+      font-size: 14px;
       padding-bottom: 10px;
       letter-spacing: 0.28px;
       text-transform: capitalize;
