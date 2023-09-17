@@ -1,0 +1,41 @@
+.header {
+  padding-top: 50px;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  &__time {
+    display: flex;
+    span {
+      margin-right: 12px;
+    }
+    p {
+      color: $black;
+      text-align: center;
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 130%;
+      letter-spacing: -0.26px;
+      text-transform: capitalize;
+      opacity: 0.5;
+    }
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+  &__contact-us {
+    color: $black;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: capitalize;
+    background-color: transparent;
+    padding: 10px 25px;
+    border-radius: 21px;
+    border: 1px solid black;
+    background: $beg;
+    max-height: 34px;
+    cursor: pointer;
+  }
+}

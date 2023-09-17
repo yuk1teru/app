@@ -1,0 +1,112 @@
+.services {
+  padding-top: 153px;
+  padding-bottom: 153px;
+  .container {
+    display: flex;
+    justify-content: space-between;
+
+    @media screen and (max-width: 1199.98px) {
+      flex-wrap: wrap;
+    }
+    @media screen and (max-width: 767.98px) {
+      padding: 0 29px;
+    }
+  }
+  &__block {
+    margin-right: 63px;
+    margin-bottom: 63px;
+  }
+  &__title {
+    font-size: 48px;
+    line-height: 124.5%;
+    letter-spacing: -1.92px;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+    font-weight: 400;
+    @media screen and (max-width: 1199.98px) {
+      font-size: 64px;
+      letter-spacing: -2.56px;
+    }
+    @media screen and (max-width: 767.98px) {
+      font-size: 32px;
+      letter-spacing: -1.28px;
+    }
+  }
+  &__text {
+    color: #000;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 200%;
+    opacity: 0.5;
+    max-width: 290px;
+  }
+  &__list {
+    display: flex;
+
+    flex-wrap: wrap;
+    justify-content: space-between;
+    @media screen and (min-width: 1199.98px) {
+      max-width: 643px;
+    }
+  }
+  &__item {
+    max-width: 286px;
+    @media screen and (max-width: 1199.98px) {
+      width: 47%;
+      max-width: none;
+    }
+    &:nth-child(odd) {
+      margin-right: 6%;
+    }
+    &:nth-child(-n + 2) {
+      margin-bottom: 70px;
+    }
+    @media screen and (max-width: 767.98px) {
+      width: 100%;
+      margin-bottom: 50px;
+      &:nth-child(odd) {
+        margin-right: 0;
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  &__list-image {
+    background-color: $black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    width: 40px;
+    height: 40px;
+  }
+  &__list-title {
+    color: #000;
+    font-size: 32px;
+    line-height: 124.5%;
+    letter-spacing: -1.28px;
+    text-transform: capitalize;
+    margin-bottom: 18px;
+    font-weight: 400;
+  }
+  &__list-text {
+    color: $gray;
+    line-height: 200%;
+    letter-spacing: 0.28px;
+    max-width: 286px;
+    @media screen and (max-width: 767.98px) {
+      max-width: 100%;
+    }
+  }
+  i {
+    font-family: Satoshi;
+    font-size: 14px;
+    font-style: italic;
+    font-weight: 700;
+    line-height: 200%;
+    letter-spacing: 0.28px;
+    text-decoration-line: underline;
+  }
+}

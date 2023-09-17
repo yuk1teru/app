@@ -1,0 +1,82 @@
+.our-process {
+  color: $beg;
+  @media screen and (max-width: 1024.02px) {
+    padding-left: 28px;
+  }
+  @media screen and (max-width: 768px) {
+    padding-left: 20px;
+  }
+  .container {
+    @media screen and (max-width: 1024.02px) {
+      max-width: none;
+      padding-right: 0;
+    }
+  }
+  .all_wrapper {
+    margin: -30px 0 -30px -30px;
+  }
+  &__swiper {
+    padding: 30px !important;
+  }
+  &__main-title {
+    @extend %title;
+    margin-bottom: 20px;
+  }
+  &__wrap {
+    background-color: $black;
+    max-width: 432px;
+    height: 100%;
+    border-radius: 40px;
+    box-shadow: 2px 10px 20px 0px rgba(0, 0, 0, 0.15);
+    max-width: 432px;
+    padding: clamp(rem(25), vw(35), rem(34));
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @media screen and (max-width: 1024.02px) {
+      padding: clamp(rem(25), ourvw(35), rem(34));
+    }
+  }
+  .swiper-slide {
+    box-sizing: border-box;
+    height: auto;
+    max-height: 100%;
+    width: clamp(rem(304), vw(436), rem(487));
+    height: clamp(rem(639), vw(639), rem(518));
+    @media screen and (max-width: 1024.02px) {
+      width: clamp(rem(200), ourvw(426), rem(500));
+      height: clamp(rem(639), vw(639), rem(485));
+    }
+    @media screen and (max-width: 480.02px) {
+      width: clamp(rem(325), ourvw2(380), rem(480));
+    }
+  }
+  &__number {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 100%;
+    display: inline-block;
+  }
+  &__img {
+    width: 78%;
+    align-self: center;
+  }
+  &__title {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 100%;
+    letter-spacing: -0.96px;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+  }
+  &__text {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 156.1%;
+    letter-spacing: 0.56px;
+    max-width: clamp(rem(252), vw(323), rem(373));
+    @media screen and (max-width: 1024.02px) {
+      max-width: 340px;
+    }
+  }
+}

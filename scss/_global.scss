@@ -1,0 +1,68 @@
+html,
+body {
+  height: 100%;
+  font-family: 'Satoshi', sans-serif;
+  font-size: 14px;
+  line-height: 1;
+  font-weight: 400;
+  color: $black;
+  background: #f5f4f1;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.main {
+  flex: 1 0 auto;
+}
+.footer {
+  flex: 0 0 auto;
+}
+
+.container {
+  // max-width: 1390px;
+  // max-width: clamp(480px, vw(1390), 1390px);
+  max-width: clamp(480px, vw(1420), 1440px);
+
+  margin: 0 auto;
+  padding: 0 15px;
+  width: 100%;
+  // @media screen and (max-width: 1510px) {
+  //   max-width: 1136px;
+  // }
+  // @media screen and (max-width: 1200px) {
+  //   max-width: 990px;
+  // }
+  // @media screen and (max-width: 768px) {
+  //   max-width: 768px;
+  // }
+  // @media screen and (max-width: 480px) {
+  //   max-width: 480px;
+  // }
+}
+
+.highlight-text {
+  padding-top: 150px;
+  padding-bottom: 150px;
+  p {
+    font-size: 32px;
+    font-weight: 300;
+    line-height: 200%;
+    letter-spacing: -0.64px;
+    max-width: 768px;
+    @media screen and (max-width: 1200px) {
+      max-width: 670px;
+      font-size: 28px;
+      letter-spacing: -0.56px;
+      padding: 0 20px;
+    }
+    @media screen and (max-width: 768px) {
+      font-size: 24px;
+      line-height: 170%;
+      letter-spacing: -0.48px;
+    }
+  }
+}

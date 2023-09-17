@@ -1,0 +1,111 @@
+.case-hero {
+  margin-bottom: 150px;
+  &__wrap {
+    display: flex;
+  }
+  &__left-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 50px;
+  }
+  &__zopa {
+    margin-bottom: 27px;
+  }
+  &__app {
+    margin-bottom: 27px;
+  }
+  &__category {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__category-item {
+    padding: 8px 12px;
+    border-radius: 20px;
+    border: 1px solid #543906;
+    color: #543906;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1;
+    & + & {
+      margin-left: 9px;
+    }
+  }
+  &__overview {
+    padding: 25px 28px;
+    border-radius: 33px;
+    background: #d5d2c7;
+    max-width: 396px;
+  }
+  &__overview-title {
+    color: #543906;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 156.1%;
+    letter-spacing: -0.48px;
+    text-transform: capitalize;
+  }
+  &__overview-text {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 200%;
+    text-transform: capitalize;
+  }
+  &__hero-img {
+    box-shadow: 10px 20px 30px 0px rgba(0, 0, 0, 0.15);
+    border-radius: 45px;
+    width: 55vw;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .case-hero {
+    margin-bottom: 120px;
+    &__wrap {
+      flex-direction: column;
+      align-items: center;
+    }
+    &__left-block {
+      text-align: center;
+    }
+    &__right-block {
+      width: 100%;
+    }
+    &__hero-img {
+      width: 100%;
+    }
+    &__title-block {
+      margin-bottom: clamp(rem(24), vw(51), rem(51));
+    }
+    &__category {
+      justify-content: center;
+    }
+    &__overview {
+      padding: 41px 48px;
+      max-width: 60%;
+      margin: 0 auto;
+      margin-bottom: clamp(rem(24), vw(51), rem(51));
+    }
+  }
+}
+@media screen and (max-width: 1024px) {
+  .case-hero {
+    margin-bottom: clamp(rem(90), ourvw(120), rem(120));
+    &__left-block {
+      margin-right: 0;
+    }
+    &__overview {
+      max-width: 560px;
+    }
+    &__hero-img {
+      border-radius: 40px;
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .case-hero {
+    &__hero-img {
+      border-radius: 28px;
+    }
+  }
+}

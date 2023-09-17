@@ -1,0 +1,25 @@
+@use 'sass:math' as *;
+@use 'sass:list' as *;
+
+@function rem($px) {
+  $result: calc($px / 16) + rem;
+  @return $result;
+}
+$maxWidth: 1512;
+
+@function vw($value) {
+  $vwValue: calc(#{$value} / #{$maxWidth} * 100vw);
+  @return $vwValue;
+}
+
+$maxWidthOur: 1025;
+@function ourvw($value) {
+  $vwValue: calc(#{$value} / #{$maxWidthOur} * 100vw);
+  @return $vwValue;
+}
+
+$maxWidthOur2: 480;
+@function ourvw2($value) {
+  $vwValue: calc(#{$value} / #{$maxWidthOur2} * 100vw);
+  @return $vwValue;
+}

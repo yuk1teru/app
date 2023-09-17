@@ -1,0 +1,123 @@
+.footer {
+  color: $beg;
+  padding-bottom: 112px;
+
+  &__wrap {
+    border-radius: 40px;
+    background: $black;
+    box-shadow: 2px 10px 20px 0px rgba(0, 0, 0, 0.15);
+    padding: 25px;
+    @media screen and (max-width: 768px) {
+      padding: 35px;
+    }
+  }
+  a {
+    display: inline-block;
+  }
+  &__contacts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__email {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: -0.48px;
+    text-transform: lowercase;
+  }
+  &__tel-wrapp {
+    margin: 0 9%;
+  }
+  &__tel {
+    color: #232323;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: -0.48px;
+    text-transform: lowercase;
+    border-radius: 70px;
+    background: $beg;
+    padding: 10px 32px;
+    white-space: no-wrap;
+  }
+  &__social {
+    a:first-child {
+      margin-right: clamp(rem(58), vw(84), rem(96));
+    }
+  }
+  &__lets {
+    display: block;
+    text-align: center;
+    margin-top: 37px;
+    margin-bottom: 32px;
+    font-size: clamp(rem(24), vw(64), rem(73.1));
+    font-weight: 400;
+    line-height: 124.5%;
+    letter-spacing: -2.56px;
+    text-transform: capitalize;
+
+    @media screen and (min-width: 1200.02px) {
+      margin-top: 54px;
+    }
+    @media screen and (max-width: 1200px) {
+      font-size: 48px;
+      letter-spacing: -1.92px;
+    }
+    @media screen and (max-width: 1023.98px) {
+      font-size: 32px;
+    }
+    @media screen and (max-width: 768px) {
+      margin-top: 0;
+      margin-bottom: 24px;
+      font-size: 24px;
+    }
+  }
+  &__copyright {
+    text-align: center;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 200%;
+    @media screen and (max-width: 1199.98px) {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
+    padding-bottom: 50px;
+    &__wrap {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+    &__lets {
+      text-align: left;
+      max-width: 222px;
+      letter-spacing: -0.96px;
+    }
+    &__contacts {
+      justify-content: flex-start;
+      flex-wrap: wrap;
+    }
+    &__social {
+      flex-grow: 2;
+      display: flex;
+      justify-content: flex-end;
+      a {
+        display: inline-block;
+        &:first-child {
+          margin-right: 56px;
+        }
+      }
+    }
+    &__email {
+      flex-basis: 100%;
+      margin-bottom: 37px;
+    }
+    &__tel-wrapp {
+      flex-grow: 0;
+      margin: 0;
+    }
+  }
+}

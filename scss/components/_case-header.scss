@@ -1,0 +1,25 @@
+.case-header {
+  padding-top: 42px;
+  margin-bottom: 70px;
+  @media screen and (max-width: 1024.02px) {
+    margin-bottom: clamp(rem(80), vw(185), rem(185));
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__contact-us {
+    color: $brown;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1;
+    text-transform: capitalize;
+    border-radius: 21px;
+    border: 1px solid $brown;
+    background: $beg;
+    padding: 10px 25px;
+    cursor: pointer;
+  }
+}

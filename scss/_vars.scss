@@ -1,0 +1,10 @@
+@function max($numbers...) {
+  @return m#{a}x(#{$numbers});
+}
+@function min($numbers...) {
+  @return m#{i}n(#{$numbers});
+}
+$gray: #8d8c8b;
+$black: #252525;
+$beg: #f5f4f1;
+$brown: #86773a;
