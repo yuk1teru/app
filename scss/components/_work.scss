@@ -7,6 +7,9 @@
     @media screen and (max-width: 550px) {
       padding-left: clamp(rem(21), vw(74), rem(85)) !important;
     }
+    @media screen and (max-width: 479.98px) {
+      padding-left: clamp(rem(10), vw(60.5), rem(62)) !important;
+    }
   }
   img {
     box-sizing: border-box;
@@ -25,6 +28,9 @@
     padding-left: calc((100% - clamp(480px, vw(1390), 1390px)) / 2) !important;
     @media screen and (max-width: 550px) {
       padding-left: clamp(rem(21), vw(74), rem(85)) !important;
+    }
+    @media screen and (max-width: 479.98px) {
+      padding-left: clamp(rem(10), vw(60.5), rem(62)) !important;
     }
   }
   &__slide + &__slide {

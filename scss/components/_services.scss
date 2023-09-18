@@ -8,9 +8,6 @@
     @media screen and (max-width: 1199.98px) {
       flex-wrap: wrap;
     }
-    @media screen and (max-width: 767.98px) {
-      padding: 0 29px;
-    }
   }
   &__block {
     margin-right: 63px;
@@ -81,6 +78,9 @@
     margin-bottom: 20px;
     width: 40px;
     height: 40px;
+    @media screen and (max-width: 1023.98px) {
+      margin-bottom: 18px;
+    }
   }
   &__list-title {
     color: #000;
@@ -90,14 +90,21 @@
     text-transform: capitalize;
     margin-bottom: 18px;
     font-weight: 400;
+    @media screen and (max-width: 1023.98px) {
+      font-size: 24px;
+      letter-spacing: 0.48px;
+    }
   }
   &__list-text {
     color: $gray;
     line-height: 200%;
     letter-spacing: 0.28px;
+    font-size: 14px;
+    font-weight: 300;
     max-width: 286px;
+    text-transform: capitalize;
     @media screen and (max-width: 767.98px) {
-      max-width: 100%;
+      max-width: 290px;
     }
   }
   i {

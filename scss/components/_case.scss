@@ -64,6 +64,9 @@
     letter-spacing: 0.56px;
     margin-bottom: 28px;
     max-width: 77%;
+    @media screen and (max-width: 1023.98px) {
+      max-width: 100%;
+    }
   }
   &__link {
     color: $beg;

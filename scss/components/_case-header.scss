@@ -1,8 +1,8 @@
 .case-header {
   padding-top: 42px;
-  margin-bottom: 70px;
+  margin-bottom: 80px;
   @media screen and (max-width: 1024.02px) {
-    margin-bottom: clamp(rem(80), vw(185), rem(185));
+    margin-bottom: clamp(rem(80), ourvw(125), rem(145));
   }
 
   .container {
@@ -10,6 +10,7 @@
     justify-content: space-between;
     align-items: center;
   }
+
   &__contact-us {
     color: $brown;
     font-size: 14px;

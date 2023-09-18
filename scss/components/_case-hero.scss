@@ -11,9 +11,23 @@
   }
   &__zopa {
     margin-bottom: 27px;
+    svg {
+      width: 320px;
+      height: 86px;
+    }
+    @media screen and (max-width: 1023.98px) {
+      margin-bottom: 24px;
+      svg {
+        width: clamp(rem(206), ourvw(366), rem(366));
+        height: clamp(rem(55), ourvw(98), rem(98));
+      }
+    }
   }
   &__app {
     margin-bottom: 27px;
+    @media screen and (max-width: 1023.98px) {
+      margin-bottom: 24px;
+    }
   }
   &__category {
     display: flex;
@@ -44,8 +58,10 @@
     line-height: 156.1%;
     letter-spacing: -0.48px;
     text-transform: capitalize;
+    margin-bottom: 5px;
   }
   &__overview-text {
+    color: #543906;
     font-size: 14px;
     font-weight: 400;
     line-height: 200%;
@@ -57,7 +73,13 @@
     width: 55vw;
   }
 }
-
+@media screen and (max-width: 1200px) {
+  .case-hero {
+    &__overview {
+      border-radius: 20px;
+    }
+  }
+}
 @media screen and (max-width: 1199px) {
   .case-hero {
     margin-bottom: 120px;
@@ -96,7 +118,9 @@
     }
     &__overview {
       max-width: 560px;
+      padding: 18px 24px;
     }
+
     &__hero-img {
       border-radius: 40px;
     }
@@ -106,6 +130,13 @@
   .case-hero {
     &__hero-img {
       border-radius: 28px;
+    }
+  }
+}
+@media screen and (max-width: 480px) {
+  .case-hero {
+    &__hero-img {
+      border-radius: 17px;
     }
   }
 }

@@ -25,7 +25,7 @@ var swiper = new Swiper('.our-process__swiper', {
     fill: 'row',
   },
   breakpoints: {
-    1200: {
+    1201: {
       slidesPerView: 3,
       spaceBetween: 41,
       grid: {
@@ -35,7 +35,7 @@ var swiper = new Swiper('.our-process__swiper', {
     },
     1025: {
       slidesPerView: 3,
-      spaceBetween: 32,
+      spaceBetween: 30,
       grid: {
         rows: 2,
         fill: 'row',
