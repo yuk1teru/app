@@ -12,7 +12,7 @@ const approachSwiper = new Swiper('.case-approach__swiper', {
     },
     550: {
       slidesPerView: 'auto',
-      spaceBetween: 63,
+      spaceBetween: 25,
     },
   },
 });

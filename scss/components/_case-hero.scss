@@ -26,7 +26,7 @@
   &__app {
     margin-bottom: 27px;
     @media screen and (max-width: 1023.98px) {
-      margin-bottom: 24px;
+      margin-bottom: 18px;
     }
   }
   &__category {
@@ -41,6 +41,10 @@
     font-size: 14px;
     font-weight: 400;
     line-height: 1;
+    @media screen and (max-width: 767.98px) {
+      padding: 4px 12px;
+    }
+
     & + & {
       margin-left: 9px;
     }
