@@ -14,15 +14,37 @@
   img {
     box-sizing: border-box;
     border-radius: clamp(rem(30), vw(54), rem(54));
-    width: clamp(rem(549), vw(892), rem(892));
+    width: clamp(rem(549), vw(1024), rem(1024));
     max-height: 598px;
     object-fit: contain;
-    // box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     box-shadow: 2px 20px 30px 0px rgba(0, 0, 0, 0.2);
+    @media screen and (max-width: 1200.02px) {
+      width: clamp(rem(549), vw(939), rem(939));
+      max-height: 500px;
+    }
+    @media screen and (max-width: 1024.02px) {
+      width: clamp(rem(549), vw(939), rem(939));
+      max-height: 428px;
+    }
+    @media screen and (max-width: 768px) {
+      width: clamp(rem(626), vw(939), rem(939));
+      max-height: 368px;
+    }
   }
   .phone-img {
-    width: clamp(rem(182), vw(296), rem(296));
+    width: clamp(rem(182), vw(339), rem(339));
+    max-width: 296px;
     box-shadow: 2px 20px 30px 0px rgba(0, 0, 0, 0.2);
+    @media screen and (max-width: 1200.02px) {
+      width: clamp(rem(182), vw(312), rem(312));
+    }
+    @media screen and (max-width: 1024.02px) {
+      width: clamp(rem(182), vw(312), rem(312));
+    }
+    @media screen and (max-width: 768px) {
+      width: clamp(rem(209), vw(312), rem(312));
+      border-radius: 30px;
+    }
   }
   &__swiper {
     padding-left: calc((100% - clamp(480px, vw(1390), 1390px)) / 2) !important;

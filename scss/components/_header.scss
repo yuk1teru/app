@@ -1,10 +1,32 @@
 .header {
   padding-top: 50px;
+  position: relative;
+  @media screen and (max-width: 767.98px) {
+    padding-top: 70px;
+  }
   .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+  }
+  &__logo {
+    @media screen and (max-width: 767.98px) {
+      margin: 0 auto;
+    }
+    svg {
+      width: 204px;
+      height: auto;
+      @media screen and (max-width: 1200.02px) {
+        width: 150px;
+      }
+      @media screen and (max-width: 1024.02px) {
+        width: 125px;
+      }
+      @media screen and (max-width: 767.98px) {
+        width: 114px;
+      }
+    }
   }
   &__time {
     display: flex;
@@ -37,5 +59,196 @@
     background: $beg;
     max-height: 34px;
     cursor: pointer;
+    @media screen and (max-width: 767.98px) {
+      position: absolute;
+      left: 50%;
+      bottom: 90px;
+      transform: translateX(-50%);
+    }
+  }
+
+  .hero {
+    width: 100vw;
+    max-height: 100vh;
+    overflow: hidden;
+    position: relative;
+    margin-top: 226px;
+    margin-bottom: 181px;
+
+    @media screen and (max-width: 1200.02px) {
+      margin-top: 230px;
+      margin-bottom: 234px;
+    }
+    @media screen and (max-width: 1024.02px) {
+      margin-top: 224px;
+      margin-bottom: 312px;
+    }
+    @media screen and (max-width: 768.02px) {
+      margin-top: clamp(rem(37), ourvw(110), rem(110));
+      margin-bottom: clamp(rem(250), ourvw(234), rem(234));
+    }
+    &__wrapper {
+      height: 261px;
+    }
+    &__video {
+      height: 261px;
+    }
+    video {
+      position: absolute;
+      height: auto;
+      top: -3px;
+      left: 50%;
+      transform: translateX(-50%);
+      max-width: 1376px;
+      @media screen and (max-width: 1024.02px) {
+        left: 0;
+        transform: translateX(0);
+      }
+      @media screen and (max-width: 768.02px) {
+        left: -121px;
+      }
+    }
+    &__title {
+      position: absolute;
+      bottom: 50%;
+      left: 50%;
+      width: 100%;
+      transform: translate(-50%, 50%);
+      color: #3d3d3d;
+      text-align: center;
+      text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+      font-family: Satoshi;
+      font-size: 32px;
+      font-weight: 300;
+      line-height: 120%;
+      letter-spacing: -1.28px;
+      span:first-child {
+        display: block;
+      }
+      @media screen and (max-width: 767.98px) {
+        bottom: calc(50% - 31px);
+        color: #252525;
+        text-align: center;
+        text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+        font-family: Satoshi;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 130%; /* 26px */
+        letter-spacing: -0.4px;
+        text-transform: capitalize;
+        max-width: 291px;
+        span:first-child {
+          display: inline;
+        }
+      }
+    }
+    &__icons {
+      position: absolute;
+      bottom: 5px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 330px;
+      height: 230px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      @media screen and (max-width: 767.98px) {
+        width: 202px;
+        height: 188px;
+      }
+      &--top,
+      &--bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+    }
+    &__icon {
+      width: 24px;
+      height: 24px;
+      filter: drop-shadow(0px 2px 5px rgba(0, 0, 0, 0.5));
+      transform-origin: center;
+      animation: rotateClockwise 3s linear forwards;
+      &.rcc {
+        animation: rotateCounterClockwise 3s linear forwards;
+      }
+      &.rc20 {
+        animation: rotateClockwise20 3s linear forwards;
+      }
+      &.rcc280 {
+        animation: rotateCounterClockwise280 3s linear forwards;
+      }
+      &.rc28 {
+        animation: rotateClockwise28 3s linear forwards;
+      }
+      &.rcc328 {
+        animation: rotateCounterClockwise328 3s linear forwards;
+      }
+    }
   }
 }
+
+@keyframes rotateClockwise {
+  from {
+    transform: rotate(0deg);
+    opacity: 0;
+  }
+  to {
+    transform: rotate(45deg);
+    opacity: 1;
+  }
+}
+@keyframes rotateClockwise20 {
+  from {
+    transform: rotate(0deg);
+    opacity: 0;
+  }
+  to {
+    transform: rotate(20deg);
+    opacity: 1;
+  }
+}
+@keyframes rotateClockwise28 {
+  from {
+    transform: rotate(0deg);
+    opacity: 0;
+  }
+  to {
+    transform: rotate(28deg);
+    opacity: 1;
+  }
+}
+@keyframes rotateCounterClockwise280 {
+  from {
+    transform: rotate(0deg);
+    opacity: 0;
+  }
+  to {
+    transform: rotate(-80deg);
+    opacity: 1;
+  }
+}
+
+@keyframes rotateCounterClockwise {
+  from {
+    transform: rotate(0deg);
+    opacity: 0;
+  }
+  to {
+    transform: rotate(-45deg);
+    opacity: 1;
+  }
+}
+@keyframes rotateCounterClockwise328 {
+  from {
+    transform: rotate(0deg);
+    opacity: 0;
+  }
+  to {
+    transform: rotate(-42deg);
+    opacity: 1;
+  }
+}
+
+//transform: rotate(45deg) !important
