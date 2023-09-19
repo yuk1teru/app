@@ -1,3 +1,8 @@
+document.addEventListener('DOMContentLoaded', function () {
+  const loaderContainer = document.querySelector('.loader-container');
+  loaderContainer.classList.add('loaded');
+});
+
 const workSwiper = new Swiper('.work__swiper', {
   slidesPerView: 'auto',
 });
