@@ -54,9 +54,6 @@
     width: clamp(rem(304), vw(436), rem(487));
     height: clamp(rem(639), vw(639), rem(738));
 
-    //  width: clamp(rem(304), vw(436), rem(487));
-    // height: clamp(rem(639), vw(639), rem(518));
-
     @media screen and (max-width: 1200.02px) {
       max-height: 518px;
     }
@@ -66,12 +63,10 @@
       height: clamp(rem(639), ourvw(739), rem(985));
       max-height: 639px;
     }
-    // @media screen and (max-width: 1024.02px) {
-    //   width: clamp(rem(200), ourvw(426), rem(500));
-    //   height: clamp(rem(639), vw(639), rem(485));
-    // }
-    @media screen and (max-width: 480.02px) {
+
+    @media screen and (max-width: 768.02px) {
       width: clamp(rem(325), ourvw2(380), rem(480));
+      max-width: 301px;
     }
 
     @media screen and (max-width: 768.02px) {

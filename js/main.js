@@ -5,26 +5,31 @@ document.addEventListener('DOMContentLoaded', function () {
 
 const workSwiper = new Swiper('.work__swiper', {
   slidesPerView: 'auto',
+  freeMode: true,
 });
 //Approach slider
 const approachSwiper = new Swiper('.case-approach__swiper', {
   slidesPerView: 'auto',
+  freeMode: true,
   spaceBetween: 25,
   breakpoints: {
     768: {
       slidesPerView: 3,
       spaceBetween: 0,
+      freeMode: true,
     },
     550: {
       slidesPerView: 'auto',
       spaceBetween: 25,
+      freeMode: true,
     },
   },
 });
 //Our Process slider
 var swiper = new Swiper('.our-process__swiper', {
-  slidesPerView: 1.1,
+  slidesPerView: 'auto',
   spaceBetween: 14,
+  freeMode: true,
   grid: {
     rows: 1,
     fill: 'row',
@@ -33,6 +38,7 @@ var swiper = new Swiper('.our-process__swiper', {
     1201: {
       slidesPerView: 3,
       spaceBetween: 41,
+
       grid: {
         rows: 2,
         fill: 'row',
@@ -41,36 +47,9 @@ var swiper = new Swiper('.our-process__swiper', {
     1025: {
       slidesPerView: 3,
       spaceBetween: 30,
+
       grid: {
         rows: 2,
-        fill: 'row',
-      },
-    },
-    768: {
-      slidesPerView: 2.2,
-      grid: {
-        rows: 1,
-        fill: 'row',
-      },
-    },
-    650: {
-      slidesPerView: 2.1,
-      grid: {
-        rows: 1,
-        fill: 'row',
-      },
-    },
-    540: {
-      slidesPerView: 1.7,
-      grid: {
-        rows: 1,
-        fill: 'row',
-      },
-    },
-    450: {
-      slidesPerView: 1.3,
-      grid: {
-        rows: 1,
         fill: 'row',
       },
     },
