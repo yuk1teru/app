@@ -88,7 +88,7 @@ function updateIndianTime() {
   const indianTime = new Date().toLocaleTimeString('en-US', options);
   const indianTimeElement = document.getElementById('indianTime');
   if (indianTimeElement) {
-    indianTimeElement.textContent = indianTime;
+    indianTimeElement.textContent = ` ${indianTime}`;
   }
 }
 

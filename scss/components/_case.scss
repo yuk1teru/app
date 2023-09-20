@@ -13,6 +13,9 @@
     @media screen and (max-width: 768px) {
       flex-basis: 100%;
       margin-bottom: 60px;
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
     &.mr {
       margin-right: 60px;
@@ -64,6 +67,9 @@
     letter-spacing: 0.56px;
     margin-bottom: 28px;
     max-width: 77%;
+    @media screen and (min-width: 1023.98px) {
+      font-size: 15px;
+    }
     @media screen and (max-width: 1023.98px) {
       max-width: 100%;
     }
@@ -80,5 +86,8 @@
     padding: 14px;
     display: block;
     text-align: center;
+    @media screen and (min-width: 1023.98px) {
+      font-size: 15px;
+    }
   }
 }

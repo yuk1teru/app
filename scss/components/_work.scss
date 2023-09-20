@@ -7,8 +7,9 @@
     @media screen and (max-width: 550px) {
       padding-left: clamp(rem(21), vw(74), rem(85)) !important;
     }
-    @media screen and (max-width: 479.98px) {
-      padding-left: clamp(rem(10), vw(60.5), rem(62)) !important;
+
+    @media screen and (max-width: 768px) {
+      padding-left: 25px !important;
     }
   }
   img {
@@ -51,8 +52,8 @@
     @media screen and (max-width: 550px) {
       padding-left: clamp(rem(21), vw(74), rem(85)) !important;
     }
-    @media screen and (max-width: 479.98px) {
-      padding-left: clamp(rem(10), vw(60.5), rem(62)) !important;
+    @media screen and (max-width: 768px) {
+      padding-left: 25px !important;
     }
   }
   &__slide + &__slide {
@@ -75,6 +76,9 @@
       position: relative;
       z-index: 2;
       display: flex;
+      @media screen and (min-width: 1023.98px) {
+        font-size: 15px;
+      }
     }
   }
 }

@@ -1,8 +1,8 @@
 .header {
-  padding-top: 50px;
+  padding-top: 25px;
   position: relative;
   @media screen and (max-width: 767.98px) {
-    padding-top: 70px;
+    padding-top: 40px;
   }
   .container {
     display: flex;
@@ -42,6 +42,10 @@
       letter-spacing: -0.26px;
       text-transform: capitalize;
       opacity: 0.5;
+      font-family: 'Overpass Mono', monospace;
+      span {
+        text-transform: lowercase;
+      }
     }
     @media screen and (max-width: 768px) {
       display: none;
@@ -59,6 +63,9 @@
     background: $beg;
     max-height: 34px;
     cursor: pointer;
+    @media screen and (min-width: 1023.98px) {
+      font-size: 15px;
+    }
     @media screen and (max-width: 767.98px) {
       position: absolute;
       left: 50%;
@@ -68,19 +75,19 @@
   }
 
   .hero {
-    width: 100vw;
+    width: 100%;
     max-height: 100vh;
     overflow: hidden;
     position: relative;
-    margin-top: 226px;
+    margin-top: 150px;
     margin-bottom: 181px;
 
     @media screen and (max-width: 1200.02px) {
-      margin-top: 230px;
+      margin-top: 162px;
       margin-bottom: 234px;
     }
     @media screen and (max-width: 1024.02px) {
-      margin-top: 224px;
+      margin-top: 184px;
       margin-bottom: 312px;
     }
     @media screen and (max-width: 768.02px) {
@@ -164,91 +171,5 @@
         align-items: center;
       }
     }
-    &__icon {
-      width: 24px;
-      height: 24px;
-      filter: drop-shadow(0px 2px 5px rgba(0, 0, 0, 0.5));
-      transform-origin: center;
-      animation: rotateClockwise 3s linear forwards;
-      &.rcc {
-        animation: rotateCounterClockwise 3s linear forwards;
-      }
-      &.rc20 {
-        animation: rotateClockwise20 3s linear forwards;
-      }
-      &.rcc280 {
-        animation: rotateCounterClockwise280 3s linear forwards;
-      }
-      &.rc28 {
-        animation: rotateClockwise28 3s linear forwards;
-      }
-      &.rcc328 {
-        animation: rotateCounterClockwise328 3s linear forwards;
-      }
-    }
   }
 }
-
-@keyframes rotateClockwise {
-  from {
-    transform: rotate(0deg);
-    opacity: 0;
-  }
-  to {
-    transform: rotate(45deg);
-    opacity: 1;
-  }
-}
-@keyframes rotateClockwise20 {
-  from {
-    transform: rotate(0deg);
-    opacity: 0;
-  }
-  to {
-    transform: rotate(20deg);
-    opacity: 1;
-  }
-}
-@keyframes rotateClockwise28 {
-  from {
-    transform: rotate(0deg);
-    opacity: 0;
-  }
-  to {
-    transform: rotate(28deg);
-    opacity: 1;
-  }
-}
-@keyframes rotateCounterClockwise280 {
-  from {
-    transform: rotate(0deg);
-    opacity: 0;
-  }
-  to {
-    transform: rotate(-80deg);
-    opacity: 1;
-  }
-}
-
-@keyframes rotateCounterClockwise {
-  from {
-    transform: rotate(0deg);
-    opacity: 0;
-  }
-  to {
-    transform: rotate(-45deg);
-    opacity: 1;
-  }
-}
-@keyframes rotateCounterClockwise328 {
-  from {
-    transform: rotate(0deg);
-    opacity: 0;
-  }
-  to {
-    transform: rotate(-42deg);
-    opacity: 1;
-  }
-}
-
-//transform: rotate(45deg) !important

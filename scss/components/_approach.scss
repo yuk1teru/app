@@ -21,6 +21,9 @@
     letter-spacing: 0.56px;
     margin: 0 auto 100px;
     max-width: 440px;
+    @media screen and (min-width: 1023.98px) {
+      font-size: 15px;
+    }
 
     @media screen and (max-width: 767.98px) {
       margin-bottom: clamp(rem(30), vw(133), rem(133));
@@ -73,10 +76,7 @@
   .swiper {
     padding: 30px !important;
     @media screen and (max-width: 767.98px) {
-      padding-left: calc((100% - clamp(480px, vw(1390), 1390px) + 20px) / 2) !important;
-      @media screen and (max-width: 550px) {
-        padding-left: calc(clamp(rem(21), vw(74), rem(85)) + 30px) !important;
-      }
+      padding-left: 55px !important;
     }
   }
   .swiper-slide {

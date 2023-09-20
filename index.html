@@ -6,8 +6,8 @@
     <title>Home page</title>
     <link rel="stylesheet" href="css/style.min.css" />
     <link href="https://api.fontshare.com/v2/css?f[]=satoshi@700,300,400&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./css/aos.css" />
   </head>
 
   <body>
@@ -101,33 +101,76 @@
                   </clipPath>
                 </defs></svg
             ></span>
-            <p id="indianTime">DEL, IND 2:03pm</p>
+            <p>DEL, IND <span id="indianTime"></span></p>
           </div>
           <button class="header__contact-us" type="button" id="scroll-btn">Contact Us</button>
         </div>
         <section class="hero">
           <div class="hero__wrapper">
-            <div class="hero__video">
-              <video autoplay muted id="myVideo">
-                <source src="./video/bg.mp4" type="video/mp4" />
-              </video>
-            </div>
             <h1 class="hero__title">
               <span>We Design Websites</span>
               <span>More Gorgeous than Ryan Gosling.</span>
             </h1>
             <div class="hero__icons">
               <div class="hero__icons--top">
-                <img src="./images/t1.svg" alt="t1" class="hero__icon" />
-                <img src="./images/t2.svg" alt="t2" class="hero__icon rc20" />
-                <img src="./images/t3.svg" alt="t3" class="hero__icon rcc280" />
-                <img src="./images/t4.svg" alt="t4" class="hero__icon rc28" />
+                <lottie-player
+                  src="./images//icons/t1.json"
+                  background="transparent"
+                  speed="1"
+                  style="width: 32px; height: 32px"
+                  autoplay
+                ></lottie-player>
+                <lottie-player
+                  src="./images//icons/t2.json"
+                  background="transparent"
+                  speed="1"
+                  style="width: 32px; height: 32px"
+                  autoplay
+                ></lottie-player>
+                <lottie-player
+                  src="./images//icons/t3.json"
+                  background="transparent"
+                  speed="1"
+                  style="width: 32px; height: 32px"
+                  autoplay
+                ></lottie-player>
+                <lottie-player
+                  src="./images//icons/t4.json"
+                  background="transparent"
+                  speed="1"
+                  style="width: 32px; height: 32px; transform: scale(-1, 1)"
+                  autoplay
+                ></lottie-player>
               </div>
               <div class="hero__icons--bottom">
-                <img src="./images/b1.svg" alt="b1" class="hero__icon rcc328" />
-                <img src="./images/b2.svg" alt="b2" class="hero__icon" />
-                <img src="./images/b3.svg" alt="b3" class="hero__icon rcc" />
-                <img src="./images/b4.svg" alt="b4" class="hero__icon" />
+                <lottie-player
+                  src="./images//icons/b1.json"
+                  background="transparent"
+                  speed="1"
+                  style="width: 32px; height: 32px"
+                  autoplay
+                ></lottie-player>
+                <lottie-player
+                  src="./images//icons/b2.json"
+                  background="transparent"
+                  speed="1"
+                  style="width: 32px; height: 32px"
+                  autoplay
+                ></lottie-player>
+                <lottie-player
+                  src="./images//icons/b3.json"
+                  background="transparent"
+                  speed="1"
+                  style="width: 32px; height: 32px"
+                  autoplay
+                ></lottie-player>
+                <lottie-player
+                  src="./images//icons/b4.json"
+                  background="transparent"
+                  speed="1"
+                  style="width: 32px; height: 32px"
+                  autoplay
+                ></lottie-player>
               </div>
             </div>
           </div>
@@ -493,8 +536,9 @@
     <div class="loader-container">
       <div class="loader"></div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./js/lottie-player.js"></script>
+    <script src="./js/swiper-bundle.min.js"></script>
+    <script src="./js/aos.js"></script>
     <script src="js/main.min.js" type="module"></script>
   </body>
 </html>
