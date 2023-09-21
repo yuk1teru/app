@@ -171,5 +171,89 @@
         align-items: center;
       }
     }
+    &__icon {
+      width: 24px;
+      height: 24px;
+      // filter: drop-shadow(0px 2px 5px rgba(0, 0, 0, 0.5));
+      transform-origin: center;
+      animation: rotateClockwise 3s linear forwards;
+      &.rcc {
+        animation: rotateCounterClockwise 3s linear forwards;
+      }
+      &.rc20 {
+        animation: rotateClockwise20 3s linear forwards;
+      }
+      &.rcc280 {
+        animation: rotateCounterClockwise280 3s linear forwards;
+      }
+      &.rc28 {
+        animation: rotateClockwise28 3s linear forwards;
+      }
+      &.rcc328 {
+        animation: rotateCounterClockwise328 3s linear forwards;
+      }
+    }
+  }
+}
+
+@keyframes rotateClockwise {
+  from {
+    transform: rotate(0deg);
+    opacity: 0;
+  }
+  to {
+    transform: rotate(45deg);
+    opacity: 1;
+  }
+}
+@keyframes rotateClockwise20 {
+  from {
+    transform: rotate(0deg);
+    opacity: 0;
+  }
+  to {
+    transform: rotate(20deg);
+    opacity: 1;
+  }
+}
+@keyframes rotateClockwise28 {
+  from {
+    transform: rotate(0deg);
+    opacity: 0;
+  }
+  to {
+    transform: rotate(28deg);
+    opacity: 1;
+  }
+}
+@keyframes rotateCounterClockwise280 {
+  from {
+    transform: rotate(0deg);
+    opacity: 0;
+  }
+  to {
+    transform: rotate(-80deg);
+    opacity: 1;
+  }
+}
+
+@keyframes rotateCounterClockwise {
+  from {
+    transform: rotate(0deg);
+    opacity: 0;
+  }
+  to {
+    transform: rotate(-45deg);
+    opacity: 1;
+  }
+}
+@keyframes rotateCounterClockwise328 {
+  from {
+    transform: rotate(0deg);
+    opacity: 0;
+  }
+  to {
+    transform: rotate(-42deg);
+    opacity: 1;
   }
 }
