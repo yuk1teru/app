@@ -12,6 +12,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @media screen and (max-width: 1199.98px) {
+      justify-content: center;
+    }
   }
 
   &__contact-us {
