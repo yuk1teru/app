@@ -5,13 +5,47 @@ document.addEventListener('DOMContentLoaded', function () {
 
 const workSwiper = new Swiper('.work__swiper', {
   slidesPerView: 'auto',
+  mousewheel: true,
   freeMode: true,
+  mousewheel: {
+    // Чутливість прокрутки мишкою (за замовчуванням 1)
+    sensitivity: 0.5,
+    releaseOnEdges: true,
+  },
+  on: {
+    reachEnd: function () {
+      workSwiper.mousewheel.disable();
+    },
+
+    fromEdge: function () {
+      workSwiper.mousewheel.enable();
+    },
+  },
 });
 //Approach slider
 const approachSwiper = new Swiper('.case-approach__swiper', {
   slidesPerView: 'auto',
   freeMode: true,
   spaceBetween: 25,
+  mousewheel: true,
+  mousewheel: {
+    // Чутливість прокрутки мишкою (за замовчуванням 1)
+    sensitivity: 0.5,
+    releaseOnEdges: true,
+  },
+  on: {
+    reachEnd: function () {
+      setTimeout(() => {
+        approachSwiper.mousewheel.disable();
+      }, 0);
+    },
+
+    fromEdge: function () {
+      setTimeout(() => {
+        approachSwiper.mousewheel.enable();
+      }, 0);
+    },
+  },
   breakpoints: {
     768: {
       slidesPerView: 3,
@@ -26,10 +60,11 @@ const approachSwiper = new Swiper('.case-approach__swiper', {
   },
 });
 //Our Process slider
-var swiper = new Swiper('.our-process__swiper', {
+var ourSwiper = new Swiper('.our-process__swiper', {
   slidesPerView: 'auto',
   spaceBetween: 14,
   freeMode: true,
+
   grid: {
     rows: 1,
     fill: 'row',
@@ -38,7 +73,6 @@ var swiper = new Swiper('.our-process__swiper', {
     1201: {
       slidesPerView: 3,
       spaceBetween: 41,
-
       grid: {
         rows: 2,
         fill: 'row',
