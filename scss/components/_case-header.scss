@@ -1,8 +1,8 @@
 .case-header {
   padding-top: 25px;
-  margin-bottom: 80px;
+  margin-bottom: 75px;
   @media screen and (max-width: 1024.02px) {
-    margin-bottom: clamp(rem(75), ourvw(125), rem(145));
+    margin-bottom: clamp(rem(70), ourvw(125), rem(145));
   }
   @media screen and (max-width: 767.98px) {
     padding-top: 40px;

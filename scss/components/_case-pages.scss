@@ -1,0 +1,122 @@
+.lazar {
+  .case {
+    &-hero__h1 {
+      color: #4575ae;
+    }
+    &-hero__app {
+      color: #9dbce1;
+    }
+    &-hero__category-item {
+      border: 1px solid #4575ae;
+      color: #4575ae;
+    }
+    &-hero__overview {
+      background: #c1d7f2;
+    }
+    &-hero__overview-title {
+      color: #4575ae;
+    }
+    &-hero__overview-text {
+      color: #4575ae;
+    }
+    &-approach__title {
+      color: #4575ae;
+    }
+    &-approach__text {
+      color: #4575ae;
+    }
+    &-approach__img {
+      div:nth-child(1) {
+        background-color: #d1e5fd;
+      }
+      div:nth-child(2) {
+        background-color: #3376e6;
+      }
+      div:nth-child(3) {
+        background-color: #f1f3f3;
+      }
+    }
+  }
+}
+
+.suena {
+  .case {
+    &-hero__h1 {
+      color: #ee7739;
+    }
+    &-hero__app {
+      color: #e0bead;
+    }
+    &-hero__category-item {
+      border: 1px solid #ee7739;
+      color: #ee7739;
+    }
+    &-hero__overview {
+      background: #ee7739;
+    }
+    &-hero__overview-title {
+      color: #f8f2ef;
+    }
+    &-hero__overview-text {
+      color: #f8f2ef;
+    }
+    &-approach__title {
+      color: #c69177;
+    }
+    &-approach__text {
+      color: #581f02;
+    }
+    &-approach__img {
+      div:nth-child(1) {
+        background-color: #b7585d;
+      }
+      div:nth-child(2) {
+        background-color: #f0ede8;
+      }
+      div:nth-child(3) {
+        background-color: #ee7739;
+      }
+    }
+  }
+}
+
+.rishi {
+  .case {
+    &-hero__h1 {
+      color: #979ba7;
+    }
+    &-hero__app {
+      color: #4c668b;
+    }
+    &-hero__category-item {
+      border: 1px solid #254659;
+      color: #254659;
+    }
+    &-hero__overview {
+      background: #979ba7;
+    }
+    &-hero__overview-title {
+      color: #efeeeb;
+    }
+    &-hero__overview-text {
+      color: #efeeeb;
+    }
+    &-approach__title {
+      color: #254659;
+    }
+    &-approach__text {
+      color: #254659;
+    }
+    &-approach__img {
+      div:nth-child(1) {
+        background-color: #4c668b;
+      }
+      div:nth-child(2) {
+        background-color: #fff4de;
+      }
+      div:nth-child(3) {
+        background-color: #979ba7;
+      }
+    }
+  }
+}

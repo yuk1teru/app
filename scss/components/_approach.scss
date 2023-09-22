@@ -9,7 +9,7 @@
     text-transform: capitalize;
     margin-bottom: 5px;
     @media screen and (max-width: 767.98px) {
-      margin-bottom: 33px;
+      margin-bottom: 27px;
     }
   }
   &__text {
@@ -18,7 +18,6 @@
     font-size: 14px;
     font-weight: 300;
     line-height: 200%;
-    letter-spacing: 0.56px;
     margin: 0 auto 100px;
     max-width: 440px;
     @media screen and (min-width: 1023.98px) {
@@ -28,7 +27,7 @@
     @media screen and (max-width: 767.98px) {
       margin-bottom: clamp(rem(30), vw(133), rem(133));
       max-width: 298px;
-      margin-bottom: 33px;
+      margin-bottom: 60px;
     }
   }
   &__img {

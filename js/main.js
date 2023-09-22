@@ -92,6 +92,25 @@ if (scrollBtnEl) {
     scrollToSection('footer');
   });
 }
+
+const box = document.getElementById('scroll-btn');
+
+// Визначте розмір екрану для перевірки типу пристрою
+const screenWidth = window.innerWidth;
+
+if (screenWidth <= 768) {
+  // Мобільний пристрій: використовуємо AOS для з'явлення знизу
+  box.setAttribute('data-aos', 'fade-up');
+  box.setAttribute('data-aos-once', 'false');
+  box.setAttribute('data-aos-easing', 'ease-in-out-back');
+  box.setAttribute('data-aos-duration', '500');
+} else {
+  box.setAttribute('data-aos', 'fade');
+  box.setAttribute('data-aos-duration', '1200');
+  // Десктоп: використовуємо звичайний fade
+  // box.classList.add('aos-disabled'); // Вимикаємо AOS
+  // box.style.opacity = 1; // Встановлюємо повну видимість
+}
 AOS.init({
   duration: 1200,
   once: true,
