@@ -15,48 +15,61 @@
   img {
     box-sizing: border-box;
     border-radius: clamp(rem(30), vw(54), rem(54));
-    width: clamp(rem(549), vw(1024), rem(1024));
+    // width: clamp(rem(549), vw(1024), rem(1024));
     max-height: 598px;
     object-fit: contain;
+    max-width: max-content;
     box-shadow: 2px 20px 30px 0px rgba(0, 0, 0, 0.2);
     @media screen and (min-width: 1200px) {
       max-width: 892px;
     }
     @media screen and (max-width: 1200.02px) {
-      width: clamp(rem(549), vw(939), rem(939));
+      // width: clamp(rem(549), vw(939), rem(939));
       max-height: 500px;
     }
     @media screen and (max-width: 1024.02px) {
-      width: clamp(rem(549), vw(939), rem(939));
+      // width: clamp(rem(549), vw(939), rem(939));
       max-height: 428px;
     }
     @media screen and (max-width: 768px) {
-      width: clamp(rem(626), vw(939), rem(939));
+      // width: clamp(rem(626), vw(939), rem(939));
       max-height: 368px;
     }
   }
   .phone-img {
-    width: clamp(rem(182), vw(339), rem(339));
+    // width: clamp(rem(182), vw(339), rem(339));
     max-width: 296px;
     box-shadow: 2px 20px 30px 0px rgba(0, 0, 0, 0.2);
     @media screen and (max-width: 1200.02px) {
-      width: clamp(rem(182), vw(312), rem(312));
+      // width: clamp(rem(182), vw(312), rem(312));
+      max-height: 500px;
     }
     @media screen and (max-width: 1024.02px) {
-      width: clamp(rem(182), vw(312), rem(312));
+      // width: clamp(rem(182), vw(312), rem(312));
+      max-height: 428px;
     }
     @media screen and (max-width: 768px) {
-      width: clamp(rem(209), vw(312), rem(312));
+      // width: clamp(rem(209), vw(312), rem(312));
       border-radius: 30px;
+      max-height: 368px;
     }
   }
-  &__swiper {
-    padding-left: calc((100% - clamp(480px, vw(1390), 1390px)) / 2) !important;
-    @media screen and (max-width: 550px) {
-      padding-left: clamp(rem(21), vw(74), rem(85)) !important;
+
+  &__swiper-wrapper {
+    display: flex;
+    overflow: auto; /* Включаємо полосу прокрутки */
+    scrollbar-width: none; /* Видаляємо полосу прокрутки Firefox */
+    -ms-overflow-style: none; /* Видаляємо полосу прокрутки IE/Edge */
+    padding: 0 calc((100% - clamp(480px, vw(1390), 1390px)) / 2) !important;
+    @media screen and (max-width: 1024.02px) {
+      overflow: auto;
     }
+
     @media screen and (max-width: 768px) {
-      padding-left: 25px !important;
+      padding: 0 25px !important;
+    }
+    &::-webkit-scrollbar {
+      display: none; /* Видаляємо полосу прокрутки у Chrome та Safari */
     }
   }
   &__slide + &__slide {
@@ -83,5 +96,97 @@
         font-size: 15px;
       }
     }
+    &:last-child {
+      @media screen and (max-width: 767.98px) {
+        padding-right: 25px;
+      }
+    }
   }
 }
+// .work {
+//   padding-bottom: 100px;
+//   &__title {
+//     @extend %title;
+//     margin-bottom: 20px;
+//     padding-left: calc((100% - clamp(480px, vw(1390), 1390px)) / 2) !important;
+//     @media screen and (max-width: 550px) {
+//       padding-left: clamp(rem(21), vw(74), rem(85)) !important;
+//     }
+
+//     @media screen and (max-width: 768px) {
+//       padding-left: 25px !important;
+//     }
+//   }
+//   img {
+//     box-sizing: border-box;
+//     border-radius: clamp(rem(30), vw(54), rem(54));
+//     width: clamp(rem(549), vw(1024), rem(1024));
+//     max-height: 598px;
+//     object-fit: contain;
+//     box-shadow: 2px 20px 30px 0px rgba(0, 0, 0, 0.2);
+//     @media screen and (min-width: 1200px) {
+//       max-width: 892px;
+//     }
+//     @media screen and (max-width: 1200.02px) {
+//       width: clamp(rem(549), vw(939), rem(939));
+//       max-height: 500px;
+//     }
+//     @media screen and (max-width: 1024.02px) {
+//       width: clamp(rem(549), vw(939), rem(939));
+//       max-height: 428px;
+//     }
+//     @media screen and (max-width: 768px) {
+//       width: clamp(rem(626), vw(939), rem(939));
+//       max-height: 368px;
+//     }
+//   }
+//   .phone-img {
+//     width: clamp(rem(182), vw(339), rem(339));
+//     max-width: 296px;
+//     box-shadow: 2px 20px 30px 0px rgba(0, 0, 0, 0.2);
+//     @media screen and (max-width: 1200.02px) {
+//       width: clamp(rem(182), vw(312), rem(312));
+//     }
+//     @media screen and (max-width: 1024.02px) {
+//       width: clamp(rem(182), vw(312), rem(312));
+//     }
+//     @media screen and (max-width: 768px) {
+//       width: clamp(rem(209), vw(312), rem(312));
+//       border-radius: 30px;
+//     }
+//   }
+//   &__swiper {
+//     padding-left: calc((100% - clamp(480px, vw(1390), 1390px)) / 2) !important;
+//     @media screen and (max-width: 550px) {
+//       padding-left: clamp(rem(21), vw(74), rem(85)) !important;
+//     }
+//     @media screen and (max-width: 768px) {
+//       padding-left: 25px !important;
+//     }
+//   }
+//   &__slide + &__slide {
+//     margin-left: clamp(rem(15), vw(24), rem(24));
+//   }
+//   &__slide {
+//     height: auto !important;
+//     width: auto !important;
+//     display: flex !important;
+//     flex-direction: column;
+//     justify-content: space-between;
+
+//     p {
+//       margin: clamp(rem(25), vw(39), rem(39));
+//       font-size: 14px;
+//       margin-bottom: 10px;
+//       letter-spacing: 0.28px;
+//       text-transform: capitalize;
+//       color: $gray;
+//       position: relative;
+//       z-index: 2;
+//       display: flex;
+//       @media screen and (min-width: 1023.98px) {
+//         font-size: 15px;
+//       }
+//     }
+//   }
+// }

@@ -1,27 +1,42 @@
 .our-process {
   color: $beg;
+  overflow: hidden;
+  margin-bottom: -30px;
 
   .container {
     @media screen and (max-width: 1024.02px) {
       max-width: none;
       padding-right: 0;
     }
-    @media screen and (min-width: 550.02px) and (max-width: 1024.02px) {
-      padding-left: calc((100% - clamp(480px, vw(1390), 1390px)) / 2) !important;
-    }
+
     @media screen and (max-width: 768px) {
-      padding-left: 25px;
+      padding-left: 0;
     }
   }
-  .all_wrapper {
-    margin: -30px 0 -30px -30px;
-  }
+
   &__swiper {
     padding: 30px !important;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    overflow: auto;
+    scrollbar-width: none; /* Видаляємо полосу прокрутки Firefox */
+    -ms-overflow-style: none;
+    @media screen and (max-width: 1024.02px) {
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      padding: 25px !important;
+    }
+    &::-webkit-scrollbar {
+      display: none; /* Видаляємо полосу прокрутки у Chrome та Safari */
+    }
   }
   &__main-title {
     @extend %title;
-    margin-bottom: 20px;
+    @media screen and (max-width: 1024.02px) {
+      padding-left: 25px;
+      margin-bottom: -5px;
+    }
   }
   &__wrap {
     background-color: $black;
@@ -40,10 +55,12 @@
     }
     @media screen and (max-width: 1024.02px) {
       padding: clamp(rem(25), ourvw(35), rem(34));
+      width: 426px;
       max-height: 639px;
     }
     @media screen and (max-width: 768.02px) {
       max-height: 485px;
+      width: 301px;
       border-radius: 20px;
     }
   }
@@ -51,7 +68,7 @@
     box-sizing: border-box;
     height: auto;
     max-height: 639px;
-    width: clamp(rem(304), vw(436), rem(487));
+    width: calc((100% - 42px * 2) / 3);
     height: clamp(rem(639), vw(639), rem(738));
 
     @media screen and (max-width: 1200.02px) {
@@ -59,18 +76,43 @@
     }
 
     @media screen and (max-width: 1024.02px) {
-      width: clamp(rem(200), ourvw(426), rem(500));
+      // width: clamp(rem(200), ourvw(426), rem(500));
+      width: auto;
       height: clamp(rem(639), ourvw(739), rem(985));
       max-height: 639px;
     }
 
     @media screen and (max-width: 768.02px) {
-      width: clamp(rem(325), ourvw2(380), rem(480));
+      max-height: 485px;
       max-width: 301px;
     }
-
-    @media screen and (max-width: 768.02px) {
-      max-height: 485px;
+    &:nth-last-child(-n + 3) {
+      margin-top: 30px;
+      @media screen and (max-width: 1200.02px) {
+        margin-top: 24px;
+      }
+      @media screen and (max-width: 1024.02px) {
+        margin-top: 0;
+      }
+    }
+    &:last-child {
+      @media screen and (max-width: 768.02px) {
+        position: relative;
+        &::after {
+          content: '';
+          width: 30px;
+          height: 20px;
+          background-color: transparent;
+          position: absolute;
+          top: 0;
+          right: -25px;
+        }
+      }
+    }
+  }
+  .swiper-slide + .swiper-slide {
+    @media screen and (max-width: 1024.02px) {
+      margin-left: 31px;
     }
   }
 

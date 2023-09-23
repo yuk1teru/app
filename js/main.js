@@ -3,98 +3,150 @@ document.addEventListener('DOMContentLoaded', function () {
   loaderContainer.classList.add('loaded');
 });
 
-document.querySelector('.work__swiper').addEventListener('touchmove', function (event) {
-  // Заборонити прокручування сторінки
-  event.preventDefault();
-});
-const workSwiper = new Swiper('.work__swiper', {
-  slidesPerView: 'auto',
-  mousewheel: true,
-  freeMode: true,
+//workSlider
+function createSlider(slider) {
+  if (!slider) {
+    return;
+  }
+  slider.addEventListener('mouseenter', () => {
+    slider.addEventListener('wheel', handleWheel);
+  });
 
-  mousewheel: {
-    // Чутливість прокрутки мишкою (за замовчуванням 1)
-    sensitivity: 0.5,
-    releaseOnEdges: true,
-  },
-  on: {
-    reachEnd: function () {
-      workSwiper.mousewheel.disable();
-    },
+  slider.addEventListener('mouseleave', () => {
+    slider.removeEventListener('wheel', handleWheel);
+  });
 
-    fromEdge: function () {
-      workSwiper.mousewheel.enable();
-    },
-  },
-});
+  function handleWheel(event) {
+    event.preventDefault();
+    const direction = event.deltaY > 0 ? 1 : -1;
+
+    slider.scrollLeft += direction * 50;
+  }
+}
+
+const workSlider = document.querySelector('.work__swiper-wrapper');
+
+createSlider(workSlider);
+// // Додаємо обробник події при наведенні на slider
+// slider.addEventListener('mouseenter', () => {
+//   // Додаємо обробник події wheel
+//   slider.addEventListener('wheel', handleWheel);
+// });
+
+// // Видаляємо обробники подій при відведенні миші від slider
+// slider.addEventListener('mouseleave', () => {
+//   slider.removeEventListener('wheel', handleWheel);
+// });
+
+// function handleWheel(event) {
+//   event.preventDefault();
+//   // Визначаємо напрямок прокручування
+//   const direction = event.deltaY > 0 ? 1 : -1;
+
+//   // Змінюємо значення scrollLeft відповідно до напрямку
+//   slider.scrollLeft += direction * 50; // 50 - кількість пікселів для прокрутки
+// }
+
+// document.querySelector('.work__swiper').addEventListener('touchmove', function (event) {
+//   // Заборонити прокручування сторінки
+//   event.preventDefault();
+// });
+// const workSwiper = new Swiper('.work__swiper', {
+//   slidesPerView: 'auto',
+//   mousewheel: true,
+//   freeMode: true,
+
+//   mousewheel: {
+//     // Чутливість прокрутки мишкою (за замовчуванням 1)
+//     sensitivity: 0.5,
+//     releaseOnEdges: true,
+//   },
+//   on: {
+//     reachEnd: function () {
+//       workSwiper.mousewheel.disable();
+//     },
+
+//     fromEdge: function () {
+//       workSwiper.mousewheel.enable();
+//     },
+//   },
+// });
 //Approach slider
-const approachSwiper = new Swiper('.case-approach__swiper', {
-  slidesPerView: 'auto',
-  freeMode: true,
-  spaceBetween: 25,
-  mousewheel: true,
+const approachSlider = document.querySelector('.case-approach__swiper');
+createSlider(approachSlider);
 
-  mousewheel: {
-    // Чутливість прокрутки мишкою (за замовчуванням 1)
-    sensitivity: 0.5,
-    releaseOnEdges: true,
-  },
-  on: {
-    reachEnd: function () {
-      setTimeout(() => {
-        approachSwiper.mousewheel.disable();
-      }, 0);
-    },
+// const approachSwiper = new Swiper('.case-approach__swiper', {
+//   slidesPerView: 'auto',
+//   freeMode: true,
+//   spaceBetween: 25,
+//   mousewheel: true,
 
-    fromEdge: function () {
-      setTimeout(() => {
-        approachSwiper.mousewheel.enable();
-      }, 0);
-    },
-  },
-  breakpoints: {
-    768: {
-      slidesPerView: 3,
-      spaceBetween: 0,
-      freeMode: true,
-    },
-    550: {
-      slidesPerView: 'auto',
-      spaceBetween: 25,
-      freeMode: true,
-    },
-  },
-});
+//   mousewheel: {
+//     // Чутливість прокрутки мишкою (за замовчуванням 1)
+//     sensitivity: 0.5,
+//     releaseOnEdges: true,
+//   },
+//   on: {
+//     reachEnd: function () {
+//       setTimeout(() => {
+//         approachSwiper.mousewheel.disable();
+//       }, 0);
+//     },
+
+//     fromEdge: function () {
+//       setTimeout(() => {
+//         approachSwiper.mousewheel.enable();
+//       }, 0);
+//     },
+//   },
+//   breakpoints: {
+//     768: {
+//       slidesPerView: 3,
+//       spaceBetween: 0,
+//       freeMode: true,
+//     },
+//     550: {
+//       slidesPerView: 'auto',
+//       spaceBetween: 25,
+//       freeMode: true,
+//     },
+//   },
+// });
 //Our Process slider
-var ourSwiper = new Swiper('.our-process__swiper', {
-  slidesPerView: 'auto',
-  spaceBetween: 14,
-  freeMode: true,
+// if (window.innerWidth >= 1024) {
+//   const ourSlider = document.querySelector('.our-process__swiper');
 
-  grid: {
-    rows: 1,
-    fill: 'row',
-  },
-  breakpoints: {
-    1201: {
-      slidesPerView: 3,
-      spaceBetween: 41,
-      grid: {
-        rows: 2,
-        fill: 'row',
-      },
-    },
-    1025: {
-      slidesPerView: 3,
-      spaceBetween: 30,
+//   createSlider(ourSlider);
+// }
+// var ourSwiper = new Swiper('.our-process__swiper', {
+//   slidesPerView: 'auto',
+//   spaceBetween: 14,
+//   freeMode: true,
 
-      grid: {
-        rows: 2,
-        fill: 'row',
-      },
-    },
-  },
-});
+//   grid: {
+//     rows: 1,
+//     fill: 'row',
+//   },
+//   breakpoints: {
+//     1201: {
+//       slidesPerView: 3,
+//       spaceBetween: 41,
+//       grid: {
+//         rows: 2,
+//         fill: 'row',
+//       },
+//     },
+//     1025: {
+//       slidesPerView: 3,
+//       spaceBetween: 30,
+
+//       grid: {
+//         rows: 2,
+//         fill: 'row',
+//       },
+//     },
+//   },
+// });
 
 function updateIndianTime() {
   const options = {

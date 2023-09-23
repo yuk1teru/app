@@ -1,4 +1,18 @@
 .case-approach {
+  &__swiper {
+    display: flex;
+    overflow: auto;
+    padding: 30px !important;
+    box-sizing: border-box;
+    scrollbar-width: none; /* Видаляємо полосу прокрутки Firefox */
+    -ms-overflow-style: none; /* Видаляємо полосу прокрутки IE/Edge */
+    @media screen and (max-width: 767.98px) {
+      padding: 30px 55px !important;
+    }
+    &::-webkit-scrollbar {
+      display: none; /* Видаляємо полосу прокрутки у Chrome та Safari */
+    }
+  }
   &__title {
     color: #383838;
     text-align: center;
@@ -68,12 +82,7 @@
       }
     }
   }
-  .swiper {
-    padding: 30px !important;
-    @media screen and (max-width: 767.98px) {
-      padding-left: 55px !important;
-    }
-  }
+
   .swiper-slide {
     @media screen and (max-width: 767.98px) {
       height: auto !important;
@@ -82,12 +91,31 @@
       flex-direction: column;
       justify-content: space-between;
     }
+    &:last-child {
+      @media screen and (max-width: 768.02px) {
+        position: relative;
+        &::after {
+          content: '';
+          width: 30px;
+          height: 20px;
+          background-color: transparent;
+          position: absolute;
+          top: 0;
+          right: -25px;
+        }
+      }
+    }
     @media screen and (min-width: 767.98px) {
       & + & {
         margin-left: 66px;
       }
       width: auto !important;
       height: auto !important;
+    }
+  }
+  .swiper-slide + .swiper-slide {
+    @media screen and (max-width: 767.98px) {
+      margin-left: 25px;
     }
   }
   .swiper-wrapper {

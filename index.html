@@ -24,7 +24,6 @@
     />
 
     <link href="https://api.fontshare.com/v2/css?f[]=satoshi@700,300,400&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="./css/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./css/aos.css" />
     <link rel="stylesheet" href="css/style.min.css" />
   </head>
@@ -151,7 +150,39 @@
       <main class="main">
         <section class="work" data-aos="fade">
           <h2 class="work__title">Work Preview</h2>
-          <div class="work__swiper swiper">
+          <div class="work__swiper">
+            <div class="work__swiper-wrapper">
+              <div class="work__slide">
+                <img class="phone-img" src="./images/wp1.png" alt="work1" />
+                <p>Menu Screen</p>
+              </div>
+              <div class="work__slide">
+                <img src="./images/wp2.png" alt="work2" />
+                <p>Hero</p>
+              </div>
+              <div class="work__slide">
+                <img class="phone-img" src="./images/wp3.png" alt="work3" />
+                <p>Reviews</p>
+              </div>
+              <div class="work__slide">
+                <img src="./images/wp2.png" alt="work2" />
+                <p>Menu Screen</p>
+              </div>
+              <div class="work__slide">
+                <img class="phone-img" src="./images/wp1.png" alt="work1" />
+                <p>Menu Screen</p>
+              </div>
+              <div class="work__slide">
+                <img src="./images/wp2.png" alt="work2" />
+                <p>Menu Screen</p>
+              </div>
+              <div class="work__slide">
+                <img class="phone-img" src="./images/wp1.png" alt="work1" />
+                <p>Menu Screen</p>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="work__swiper swiper">
             <div class="work__swiper-wrapper swiper-wrapper">
               <div class="work__slide swiper-slide">
                 <img class="phone-img" src="./images/wp1.png" alt="work1" />
@@ -182,7 +213,7 @@
                 <p>Menu Screen</p>
               </div>
             </div>
-          </div>
+          </div> -->
         </section>
         <section class="case">
           <div class="container">
@@ -255,82 +286,78 @@
         <section class="our-process" data-aos="fade">
           <div class="container">
             <h2 class="our-process__main-title">Our Process</h2>
-
             <div class="all_wrapper">
-              <div class="swiper our-process__swiper">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-                    <div class="our-process__wrap">
-                      <span class="our-process__number">01.</span>
-                      <img class="our-process__img" src="./images/our1.png" alt="our1" />
-                      <div class="our-process__info">
-                        <h3 class="our-process__title">Discovery</h3>
-                        <p class="our-process__text">
-                          On our first call we will get to know what your goals are and how we can work together.
-                        </p>
-                      </div>
+              <div class="swiper-wrapper our-process__swiper">
+                <div class="swiper-slide">
+                  <div class="our-process__wrap">
+                    <span class="our-process__number">01.</span>
+                    <img class="our-process__img" src="./images/our1.png" alt="our1" />
+                    <div class="our-process__info">
+                      <h3 class="our-process__title">Discovery</h3>
+                      <p class="our-process__text">
+                        On our first call we will get to know what your goals are and how we can work together.
+                      </p>
                     </div>
                   </div>
-                  <div class="swiper-slide">
-                    <div class="our-process__wrap">
-                      <span class="our-process__number">02.</span>
+                </div>
+                <div class="swiper-slide">
+                  <div class="our-process__wrap">
+                    <span class="our-process__number">02.</span>
 
-                      <img class="our-process__img" src="./images/our2.png" alt="our1" />
-                      <div class="our-process__info">
-                        <h3 class="our-process__title">Moodboard</h3>
-                        <p class="our-process__text">
-                          Within 2 days we will present you with a variety of options regarding aesthetics and
-                          structure.
-                        </p>
-                      </div>
+                    <img class="our-process__img" src="./images/our2.png" alt="our1" />
+                    <div class="our-process__info">
+                      <h3 class="our-process__title">Moodboard</h3>
+                      <p class="our-process__text">
+                        Within 2 days we will present you with a variety of options regarding aesthetics and structure.
+                      </p>
                     </div>
                   </div>
-                  <div class="swiper-slide">
-                    <div class="our-process__wrap">
-                      <span class="our-process__number">03.</span>
-                      <img class="our-process__img" src="./images/our3.png" alt="our1" />
-                      <div class="our-process__info">
-                        <h3 class="our-process__title">Version 1</h3>
-                        <p class="our-process__text">
-                          Within a week we will have a first draft ready based on the directions chosen.
-                        </p>
-                      </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="our-process__wrap">
+                    <span class="our-process__number">03.</span>
+                    <img class="our-process__img" src="./images/our3.png" alt="our1" />
+                    <div class="our-process__info">
+                      <h3 class="our-process__title">Version 1</h3>
+                      <p class="our-process__text">
+                        Within a week we will have a first draft ready based on the directions chosen.
+                      </p>
                     </div>
                   </div>
-                  <div class="swiper-slide">
-                    <div class="our-process__wrap">
-                      <span class="our-process__number">04.</span>
-                      <img class="our-process__img" src="./images/our4.png" alt="our1" />
-                      <div class="our-process__info">
-                        <h3 class="our-process__title">Feedback</h3>
-                        <p class="our-process__text">
-                          We will discuss and take your inputs on what you like and don’t like in detail.
-                        </p>
-                      </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="our-process__wrap">
+                    <span class="our-process__number">04.</span>
+                    <img class="our-process__img" src="./images/our4.png" alt="our1" />
+                    <div class="our-process__info">
+                      <h3 class="our-process__title">Feedback</h3>
+                      <p class="our-process__text">
+                        We will discuss and take your inputs on what you like and don’t like in detail.
+                      </p>
                     </div>
                   </div>
-                  <div class="swiper-slide">
-                    <div class="our-process__wrap">
-                      <span class="our-process__number">05.</span>
-                      <img class="our-process__img" src="./images/our5.png" alt="our1" />
-                      <div class="our-process__info">
-                        <h3 class="our-process__title">Live Site</h3>
-                        <p class="our-process__text">
-                          In another weeks time your final site will be designed, developed and ready to go.
-                        </p>
-                      </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="our-process__wrap">
+                    <span class="our-process__number">05.</span>
+                    <img class="our-process__img" src="./images/our5.png" alt="our1" />
+                    <div class="our-process__info">
+                      <h3 class="our-process__title">Live Site</h3>
+                      <p class="our-process__text">
+                        In another weeks time your final site will be designed, developed and ready to go.
+                      </p>
                     </div>
                   </div>
-                  <div class="swiper-slide">
-                    <div class="our-process__wrap">
-                      <span class="our-process__number">06.</span>
-                      <img class="our-process__img" src="./images/our6.png" alt="our1" />
-                      <div class="our-process__info">
-                        <h3 class="our-process__title">More Sales</h3>
-                        <p class="our-process__text">
-                          And thats it. You can now look forward to converting your visitors more efficiently.
-                        </p>
-                      </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="our-process__wrap">
+                    <span class="our-process__number">06.</span>
+                    <img class="our-process__img" src="./images/our6.png" alt="our1" />
+                    <div class="our-process__info">
+                      <h3 class="our-process__title">More Sales</h3>
+                      <p class="our-process__text">
+                        And thats it. You can now look forward to converting your visitors more efficiently.
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -509,7 +536,6 @@
       <div class="loader"></div>
     </div>
     <script src="./js/lottie-player.js"></script>
-    <script src="./js/swiper-bundle.min.js"></script>
     <script src="./js/aos.js"></script>
     <script src="js/main.min.js" type="module"></script>
   </body>
