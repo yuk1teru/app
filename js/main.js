@@ -80,7 +80,7 @@ createSlider(workSlider);
 // });
 //Approach slider
 const approachSlider = document.querySelector('.case-approach__swiper');
-createSlider(approachSlider);
+// createSlider(approachSlider);
 
 // const approachSwiper = new Swiper('.case-approach__swiper', {
 //   slidesPerView: 'auto',
