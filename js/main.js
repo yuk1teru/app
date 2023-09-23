@@ -3,10 +3,15 @@ document.addEventListener('DOMContentLoaded', function () {
   loaderContainer.classList.add('loaded');
 });
 
+document.querySelector('.work__swiper').addEventListener('touchmove', function (event) {
+  // Заборонити прокручування сторінки
+  event.preventDefault();
+});
 const workSwiper = new Swiper('.work__swiper', {
   slidesPerView: 'auto',
   mousewheel: true,
   freeMode: true,
+
   mousewheel: {
     // Чутливість прокрутки мишкою (за замовчуванням 1)
     sensitivity: 0.5,
@@ -28,6 +33,7 @@ const approachSwiper = new Swiper('.case-approach__swiper', {
   freeMode: true,
   spaceBetween: 25,
   mousewheel: true,
+
   mousewheel: {
     // Чутливість прокрутки мишкою (за замовчуванням 1)
     sensitivity: 0.5,
