@@ -20,7 +20,14 @@ function createSlider(slider) {
     event.preventDefault();
     const direction = event.deltaY > 0 ? 1 : -1;
 
-    slider.scrollLeft += direction * 50;
+    if (
+      (direction === 1 && slider.scrollLeft + slider.clientWidth >= slider.scrollWidth) ||
+      (direction === -1 && slider.scrollLeft === 0)
+    ) {
+      window.scrollBy(0, direction * 50);
+    } else {
+      slider.scrollLeft += direction * 50;
+    }
   }
 }
 
