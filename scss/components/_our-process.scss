@@ -13,7 +13,11 @@
       padding-left: 0;
     }
   }
-
+  .all_wrapper {
+    @media screen and (min-width: 1024px) {
+      margin-left: -25px;
+    }
+  }
   &__swiper {
     padding: 30px !important;
     display: flex;

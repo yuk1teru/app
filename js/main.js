@@ -210,7 +210,15 @@ if (screenWidth <= 768) {
   // box.classList.add('aos-disabled'); // Вимикаємо AOS
   // box.style.opacity = 1; // Встановлюємо повну видимість
 }
-AOS.init({
-  duration: 1200,
-  once: true,
-});
+if (screenWidth <= 768) {
+  AOS.init({
+    duration: 700,
+    once: true,
+    offset: 110,
+  });
+} else {
+  AOS.init({
+    duration: 1200,
+    once: true,
+  });
+}

@@ -94,7 +94,7 @@
     }
     @media screen and (max-width: 768.02px) {
       margin-top: clamp(rem(37), ourvw(110), rem(110));
-      margin-bottom: 173px;
+      margin-bottom: 150px;
     }
     @media screen and (max-width: 550.02px) {
       overflow: visible;
@@ -135,6 +135,7 @@
       }
       width: 100%;
       height: auto;
+      animation: videoOpacity 0.6s linear;
     }
     &__title {
       position: absolute;
@@ -275,6 +276,17 @@
   }
   to {
     transform: rotate(-42deg);
+    opacity: 1;
+  }
+}
+@keyframes videoOpacity {
+  0% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
     opacity: 1;
   }
 }
