@@ -96,26 +96,45 @@
       margin-top: clamp(rem(37), ourvw(110), rem(110));
       margin-bottom: 173px;
     }
+    @media screen and (max-width: 550.02px) {
+      overflow: visible;
+    }
     &__wrapper {
       height: 261px;
+      position: relative;
     }
     &__video {
-      height: 261px;
+      height: 153px;
+      overflow: hidden;
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      transform: translateY(-50%);
+      @media screen and (max-width: 550.02px) {
+        margin-top: 41px;
+      }
     }
     video {
+      display: block;
       position: absolute;
       height: auto;
-      top: -3px;
+      top: calc(50% - 3px);
+
+      width: 1376px;
       left: 50%;
-      transform: translateX(-50%);
-      max-width: 1376px;
-      @media screen and (max-width: 1024.02px) {
-        left: 0;
-        transform: translateX(0);
+      transform: translate(-50%, -50%);
+    }
+    .desktop-video {
+      @media screen and (max-width: 550.02px) {
+        display: none;
       }
-      @media screen and (max-width: 768.02px) {
-        left: -121px;
+    }
+    .mobile-video {
+      @media screen and (min-width: 550.02px) {
+        display: none;
       }
+      width: 100%;
+      height: auto;
     }
     &__title {
       position: absolute;
