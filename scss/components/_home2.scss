@@ -1,2 +1,59 @@
-.home2 {
+@media screen and (max-width: 767.98px) {
+  .header.black {
+    min-height: 548px;
+    padding-top: 0;
+    margin: 50px 15px;
+    border-radius: 30px;
+    background: #232323;
+    box-shadow: 2px 10px 20px 0px rgba(0, 0, 0, 0.15);
+    .header__logo {
+      svg {
+        display: none;
+      }
+      .logo_black_bg {
+        display: block;
+        width: 114px;
+        padding-top: 20px;
+      }
+    }
+    .header__time {
+      display: flex;
+      position: absolute;
+      color: white;
+      z-index: 40;
+      bottom: 15px;
+      left: 50%;
+      transform: translateX(-50%);
+      svg {
+        g {
+          path {
+            stroke: #f4eddf;
+          }
+        }
+      }
+      p {
+        color: #fff;
+        opacity: 0.5;
+      }
+    }
+    .hero__title {
+      color: #f4eddf;
+    }
+    .hero__icon {
+      g {
+        path {
+          stroke: #f5f4f1;
+        }
+      }
+    }
+    .hero__video {
+      margin-top: 41px;
+      background-image: url('./../../images/waveForBlackPhonebg.png');
+      background-position: right;
+      background-size: cover;
+      video {
+        display: none !important;
+      }
+    }
+  }
 }

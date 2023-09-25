@@ -193,7 +193,7 @@ if (scrollBtnEl) {
 }
 
 const box = document.getElementById('scroll-btn');
-
+const hero = document.querySelector('.hero');
 // Визначте розмір екрану для перевірки типу пристрою
 const screenWidth = window.innerWidth;
 
@@ -203,6 +203,9 @@ if (screenWidth <= 768) {
   box.setAttribute('data-aos-once', 'false');
   box.setAttribute('data-aos-easing', 'ease-in-out-back');
   box.setAttribute('data-aos-duration', '500');
+  if (hero) {
+    hero.setAttribute('data-aos-duration', '3000');
+  }
 } else {
   box.setAttribute('data-aos', 'fade');
   box.setAttribute('data-aos-duration', '1200');

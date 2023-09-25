@@ -807,7 +807,7 @@ body[data-aos-easing='ease-in-out-quart'] [data-aos] {
   transform: translateZ(0);
 }
 [data-aos='fade-up'] {
-  transform: translate3d(0, 100px, 0);
+  transform: translate3d(0, 15px, 0);
 }
 [data-aos='fade-down'] {
   transform: translate3d(0, -100px, 0);
