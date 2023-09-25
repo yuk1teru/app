@@ -16,7 +16,9 @@
       justify-content: center;
     }
   }
-
+  &__logo {
+    width: 150px;
+  }
   &__contact-us {
     color: $brown;
     font-size: 14px;

@@ -166,7 +166,7 @@ function updateIndianTime() {
   const indianTime = new Date().toLocaleTimeString('en-US', options);
   const indianTimeElement = document.getElementById('indianTime');
   if (indianTimeElement) {
-    indianTimeElement.textContent = ` ${indianTime}`;
+    indianTimeElement.innerHTML = indianTime.replace(':', '<span class="doublePoint">:</span>');
   }
 }
 
@@ -214,7 +214,7 @@ if (screenWidth <= 768) {
   AOS.init({
     duration: 700,
     once: true,
-    offset: 110,
+    offset: 100,
   });
 } else {
   AOS.init({
@@ -222,3 +222,27 @@ if (screenWidth <= 768) {
     once: true,
   });
 }
+
+const footer = document.querySelector('footer');
+const scrollButton = document.querySelector('#scroll-btn');
+
+// Функція, яка буде викликатися при прокрутці сторінки
+function checkScroll() {
+  // Отримання розмірів і позиції елементів
+  const footerRect = footer.getBoundingClientRect();
+
+  // Перевірка, чи футер вже видимий
+  if (footerRect.top < window.innerHeight) {
+    // Футер видно, ховаємо кнопку
+    scrollButton.style.opacity = '0';
+  } else {
+    // Футер не видно, показуємо кнопку
+    scrollButton.style.opacity = '1';
+  }
+}
+
+// Додаємо слухача подій для визначення, коли потрібно перевіряти стан
+window.addEventListener('scroll', checkScroll);
+
+// Визиваємо функцію одразу при завантаженні сторінки
+checkScroll();

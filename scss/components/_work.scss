@@ -83,7 +83,7 @@
     justify-content: space-between;
 
     p {
-      margin: clamp(rem(25), vw(39), rem(39));
+      margin: clamp(rem(25), vw(39), rem(39)) 0;
       font-size: 14px;
       margin-bottom: 10px;
       letter-spacing: 0.28px;
