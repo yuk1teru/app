@@ -23,3 +23,5 @@ $maxWidthOur2: 480;
   $vwValue: calc(#{$value} / #{$maxWidthOur2} * 100vw);
   @return $vwValue;
 }
+
+@import './libs/aos';
