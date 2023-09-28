@@ -1,7 +1,7 @@
-document.addEventListener('DOMContentLoaded', function () {
-  const loaderContainer = document.querySelector('.loader-container');
-  loaderContainer.classList.add('loaded');
-});
+// document.addEventListener('DOMContentLoaded', function () {
+//   const loaderContainer = document.querySelector('.loader-container');
+//   loaderContainer.classList.add('loaded');
+// });
 
 //workSlider
 function createSlider(slider) {
