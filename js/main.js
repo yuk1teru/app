@@ -1,8 +1,3 @@
-// document.addEventListener('DOMContentLoaded', function () {
-//   const loaderContainer = document.querySelector('.loader-container');
-//   loaderContainer.classList.add('loaded');
-// });
-
 //workSlider
 function createSlider(slider) {
   if (!slider) {
@@ -34,7 +29,37 @@ function createSlider(slider) {
 const workSlider = document.querySelector('.work__swiper-wrapper');
 
 createSlider(workSlider);
+const nextButton = document.querySelector('.next');
+const prevButton = document.querySelector('.prev');
 
+const swiper = new Swiper('.swiper', {
+  slidesPerView: 'auto',
+});
+swiper.on('slideChange', () => {
+  updateButtonState();
+});
+nextButton.addEventListener('click', () => {
+  swiper.slideNext(1000);
+});
+prevButton.addEventListener('click', () => {
+  swiper.slidePrev(1000);
+});
+function updateButtonState() {
+  if (swiper.isBeginning) {
+    prevButton.classList.add('swiper-button-disabled');
+  } else {
+    prevButton.classList.remove('swiper-button-disabled');
+  }
+
+  if (swiper.isEnd) {
+    nextButton.classList.add('swiper-button-disabled');
+  } else {
+    nextButton.classList.remove('swiper-button-disabled');
+  }
+}
+
+// Ініціалізуємо стан кнопок при завантаженні сторінки
+updateButtonState();
 //Approach slider
 const approachSlider = document.querySelector('.case-approach__swiper');
 
@@ -53,7 +78,7 @@ function updateIndianTime() {
   }
 }
 
-setInterval(updateIndianTime, 1000);
+setInterval(updateIndianTime, 2000);
 
 updateIndianTime();
 
@@ -70,6 +95,13 @@ function scrollToSection(sectionId) {
 }
 
 const scrollBtnEl = document.getElementById('scroll-btn');
+const contactUsEl = document.querySelector('.header__contact-us');
+
+if (contactUsEl) {
+  contactUsEl.addEventListener('click', () => {
+    scrollToSection('footer');
+  });
+}
 if (scrollBtnEl) {
   scrollBtnEl.addEventListener('click', () => {
     scrollToSection('footer');
@@ -80,24 +112,24 @@ const box = document.getElementById('scroll-btn');
 const hero = document.querySelector('.hero');
 const screenWidth = window.innerWidth;
 
+box.setAttribute('data-aos', 'fade-up');
+box.setAttribute('data-aos-once', 'false');
+box.setAttribute('data-aos-easing', 'ease-in-out-back');
+box.setAttribute('data-aos-duration', '500');
 if (screenWidth <= 768) {
-  box.setAttribute('data-aos', 'fade-up');
-  box.setAttribute('data-aos-once', 'false');
-  box.setAttribute('data-aos-easing', 'ease-in-out-back');
-  box.setAttribute('data-aos-duration', '500');
   if (hero) {
     hero.setAttribute('data-aos-duration', '3000');
   }
 } else {
-  box.setAttribute('data-aos', 'fade');
   box.setAttribute('data-aos-duration', '1200');
 }
 if (screenWidth <= 768) {
   AOS.init({
     duration: 700,
     once: true,
-    offset: 100,
+    offset: 90,
   });
+  document.querySelector('.work').classList.add('aos-animate');
 } else {
   AOS.init({
     duration: 1200,
@@ -112,9 +144,9 @@ function checkScroll() {
   const footerRect = footer.getBoundingClientRect();
 
   if (footerRect.top < window.innerHeight) {
-    scrollButton.style.opacity = '0';
+    scrollButton.classList.add('hide');
   } else {
-    scrollButton.style.opacity = '1';
+    scrollButton.classList.remove('hide');
   }
 }
 

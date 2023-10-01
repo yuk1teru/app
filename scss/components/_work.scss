@@ -1,5 +1,50 @@
 .work {
   padding-bottom: 100px;
+  display: none;
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .swiper-btns {
+    // padding: 5px;
+    display: flex;
+    height: 42px;
+    border-radius: 23px;
+    opacity: 0.7;
+
+    button {
+      background: transparent;
+      border: 1px solid #282828;
+      outline: none;
+      border-radius: 23px;
+      padding: 14px 20px;
+      cursor: pointer;
+      &:active {
+        background-color: #d7d6d2;
+      }
+    }
+    button:first-child {
+      border-right: none;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+    button:last-child {
+      border-left: none;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+    .swiper-button-disabled {
+      cursor: auto;
+      &:active {
+        background-color: transparent;
+      }
+      svg {
+        opacity: 0.4;
+      }
+    }
+  }
   &__title {
     @extend %title;
     margin-bottom: 20px;
@@ -101,6 +146,20 @@
         padding-right: 25px;
       }
     }
+  }
+}
+.work-mob {
+  @media screen and (max-width: 1023.98px) {
+    display: block;
+  }
+}
+.work-desk {
+  @media screen and (min-width: 1023.98px) {
+    display: block;
+  }
+  .work__swiper {
+    padding-left: calc((100% - clamp(480px, vw(1390), 1390px)) / 2) !important;
+    padding-right: calc((100% - clamp(480px, vw(1390), 1390px)) / 2) !important;
   }
 }
 // .work {
