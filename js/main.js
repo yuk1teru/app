@@ -34,6 +34,12 @@ const prevButton = document.querySelector('.prev');
 
 const swiper = new Swiper('.swiper', {
   slidesPerView: 'auto',
+  noSwiping: true,
+  noSwipingClass: 'swiper-slide',
+  freeMode: true,
+  mousewheel: {
+    forceToAxis: true,
+  },
 });
 swiper.on('slideChange', () => {
   updateButtonState();

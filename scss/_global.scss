@@ -98,17 +98,23 @@ button.contact-us-btn {
   z-index: 20;
   opacity: 0;
   padding: 15px 32px;
-
+  @media screen and (min-width: 1023.98px) {
+    padding: 20px 66px;
+    max-height: none;
+    border-radius: 30px;
+    height: 54px;
+  }
   @media screen and (min-width: 767.98px) {
     opacity: 1;
   }
-
-  @media screen and (max-width: 767.98px) {
+  @media screen and (max-width: 1023.98px) {
     max-height: 54px;
     height: 100%;
+  }
+  @media screen and (max-width: 767.98px) {
     font-size: 14px;
     top: auto;
-    bottom: 5vw;
+    bottom: 5vh;
     right: auto;
     left: 50%;
     transform: translateX(-50%) translate3d(0, 100px, 0);
