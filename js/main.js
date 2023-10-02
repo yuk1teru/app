@@ -133,7 +133,7 @@ if (screenWidth <= 768) {
   AOS.init({
     duration: 700,
     once: true,
-    offset: 90,
+    offset: 110,
   });
   document.querySelector('.work').classList.add('aos-animate');
 } else {
