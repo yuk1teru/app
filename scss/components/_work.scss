@@ -8,7 +8,6 @@
     align-items: center;
   }
   .swiper-btns {
-    // padding: 5px;
     display: flex;
     height: 42px;
     border-radius: 23px;
@@ -59,8 +58,8 @@
   }
   img {
     box-sizing: border-box;
-    border-radius: clamp(rem(30), vw(54), rem(54));
     // width: clamp(rem(549), vw(1024), rem(1024));
+    border-radius: clamp(rem(30), vw(40), rem(40));
     max-height: 598px;
     object-fit: contain;
     max-width: max-content;
@@ -82,19 +81,16 @@
     }
   }
   .phone-img {
-    // width: clamp(rem(182), vw(339), rem(339));
+    border-radius: clamp(rem(30), vw(54), rem(54));
     max-width: 296px;
     box-shadow: 2px 20px 30px 0px rgba(0, 0, 0, 0.2);
     @media screen and (max-width: 1200.02px) {
-      // width: clamp(rem(182), vw(312), rem(312));
       max-height: 500px;
     }
     @media screen and (max-width: 1024.02px) {
-      // width: clamp(rem(182), vw(312), rem(312));
       max-height: 428px;
     }
     @media screen and (max-width: 768px) {
-      // width: clamp(rem(209), vw(312), rem(312));
       border-radius: 30px;
       max-height: 368px;
     }
