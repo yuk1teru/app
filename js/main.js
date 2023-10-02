@@ -42,31 +42,33 @@ const swiper = new Swiper('.swiper', {
   },
 });
 
-swiper.on('slideChange', () => {
+if (swiper && nextButton && prevButton) {
+  swiper.on('slideChange', () => {
+    updateButtonState();
+  });
+  nextButton.addEventListener('click', () => {
+    swiper.slideNext(1000);
+  });
+  prevButton.addEventListener('click', () => {
+    swiper.slidePrev(1000);
+  });
+  function updateButtonState() {
+    if (swiper.isBeginning) {
+      prevButton.classList.add('swiper-button-disabled');
+    } else {
+      prevButton.classList.remove('swiper-button-disabled');
+    }
+
+    if (swiper.isEnd) {
+      nextButton.classList.add('swiper-button-disabled');
+    } else {
+      nextButton.classList.remove('swiper-button-disabled');
+    }
+  }
   updateButtonState();
-});
-nextButton.addEventListener('click', () => {
-  swiper.slideNext(1000);
-});
-prevButton.addEventListener('click', () => {
-  swiper.slidePrev(1000);
-});
-function updateButtonState() {
-  if (swiper.isBeginning) {
-    prevButton.classList.add('swiper-button-disabled');
-  } else {
-    prevButton.classList.remove('swiper-button-disabled');
-  }
-
-  if (swiper.isEnd) {
-    nextButton.classList.add('swiper-button-disabled');
-  } else {
-    nextButton.classList.remove('swiper-button-disabled');
-  }
 }
-
 // Ініціалізуємо стан кнопок при завантаженні сторінки
-updateButtonState();
+
 //Approach slider
 const approachSlider = document.querySelector('.case-approach__swiper');
 
@@ -128,7 +130,7 @@ if (screenWidth <= 768) {
     hero.setAttribute('data-aos-duration', '3000');
   }
 } else {
-  box.setAttribute('data-aos-duration', '1200');
+  box.setAttribute('data-aos-duration', '500');
 }
 if (screenWidth <= 768) {
   AOS.init({

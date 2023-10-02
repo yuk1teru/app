@@ -4,13 +4,13 @@
     overflow: auto;
     padding: 30px !important;
     box-sizing: border-box;
-    scrollbar-width: none; /* Видаляємо полосу прокрутки Firefox */
-    -ms-overflow-style: none; /* Видаляємо полосу прокрутки IE/Edge */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
     @media screen and (max-width: 767.98px) {
       padding: 30px 55px !important;
     }
     &::-webkit-scrollbar {
-      display: none; /* Видаляємо полосу прокрутки у Chrome та Safari */
+      display: none;
     }
   }
   &__title {

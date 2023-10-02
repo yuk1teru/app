@@ -27,26 +27,16 @@ body {
 }
 
 .container {
-  // max-width: 1390px;
-  // max-width: clamp(480px, vw(1390), 1390px);
   max-width: clamp(480px, vw(1420), 1420px);
 
   margin: 0 auto;
   padding: 0 15px;
   width: 100%;
-  // @media screen and (max-width: 1510px) {
-  //   max-width: 1136px;
-  // }
-  // @media screen and (max-width: 1200px) {
-  //   max-width: 990px;
-  // }
+
   @media screen and (max-width: 768px) {
     max-width: 100%;
     padding: 0 25px;
   }
-  // @media screen and (max-width: 480px) {
-  //   max-width: 480px;
-  // }
 }
 
 .highlight-text {
@@ -89,7 +79,7 @@ button.contact-us-btn {
   text-transform: capitalize;
   white-space: nowrap;
   padding: 10px 25px;
-  border-radius: 21px;
+  border-radius: 40px;
   border: 1px solid #4b4a4a;
   background: $beg;
   max-height: 44px;
