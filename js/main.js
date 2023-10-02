@@ -31,40 +31,40 @@ const workSlider = document.querySelector('.work__swiper-wrapper');
 createSlider(workSlider);
 const nextButton = document.querySelector('.next');
 const prevButton = document.querySelector('.prev');
-if (Swiper) {
-  const swiper = new Swiper('.swiper', {
-    slidesPerView: 'auto',
-    noSwiping: true,
-    noSwipingClass: 'swiper-slide',
-    freeMode: true,
-    mousewheel: {
-      forceToAxis: true,
-    },
-  });
 
-  swiper.on('slideChange', () => {
-    updateButtonState();
-  });
-  nextButton.addEventListener('click', () => {
-    swiper.slideNext(1000);
-  });
-  prevButton.addEventListener('click', () => {
-    swiper.slidePrev(1000);
-  });
-  function updateButtonState() {
-    if (swiper.isBeginning) {
-      prevButton.classList.add('swiper-button-disabled');
-    } else {
-      prevButton.classList.remove('swiper-button-disabled');
-    }
+const swiper = new Swiper('.swiper', {
+  slidesPerView: 'auto',
+  noSwiping: true,
+  noSwipingClass: 'swiper-slide',
+  freeMode: true,
+  mousewheel: {
+    forceToAxis: true,
+  },
+});
 
-    if (swiper.isEnd) {
-      nextButton.classList.add('swiper-button-disabled');
-    } else {
-      nextButton.classList.remove('swiper-button-disabled');
-    }
+swiper.on('slideChange', () => {
+  updateButtonState();
+});
+nextButton.addEventListener('click', () => {
+  swiper.slideNext(1000);
+});
+prevButton.addEventListener('click', () => {
+  swiper.slidePrev(1000);
+});
+function updateButtonState() {
+  if (swiper.isBeginning) {
+    prevButton.classList.add('swiper-button-disabled');
+  } else {
+    prevButton.classList.remove('swiper-button-disabled');
+  }
+
+  if (swiper.isEnd) {
+    nextButton.classList.add('swiper-button-disabled');
+  } else {
+    nextButton.classList.remove('swiper-button-disabled');
   }
 }
+
 // Ініціалізуємо стан кнопок при завантаженні сторінки
 updateButtonState();
 //Approach slider
