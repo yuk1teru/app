@@ -1,3 +1,16 @@
+document.addEventListener('DOMContentLoaded', function () {
+  const videoElement = document.querySelector('.hero__video-mobile');
+  if (videoElement) {
+    const heroBG = document.querySelector('.hero__video-cover');
+    videoElement.play();
+    videoElement.addEventListener('play', function () {
+      setTimeout(() => {
+        heroBG.style.zIndex = '2';
+      }, 500);
+    });
+  }
+});
+
 //workSlider
 function createSlider(slider) {
   if (!slider) {

@@ -69,14 +69,40 @@
       }
     }
   }
-  .hero__video {
-    background-image: url('./../images/waveDesc.png');
-    background-position: center;
-    background-size: cover;
+  // .hero__video {
+  //   background-image: url('./../images/waveDesc.png');
+  //   background-position: center;
+  //   background-size: cover;
+  //   @media screen and (max-width: 767.98px) {
+  //     background-position: right;
+  //     margin-top: 41px;
+  //     background-image: url('./../images/waveForBlackPhonebg.png');
+  //   }
+  // }
+
+  .hero__video-desktop {
+    display: block;
     @media screen and (max-width: 767.98px) {
-      background-position: right;
-      margin-top: 41px;
-      background-image: url('./../images/waveForBlackPhonebg.png');
+      display: none;
+    }
+  }
+  .hero__video-mobile {
+    display: none;
+    position: relative;
+    width: 100%;
+    z-index: 4;
+    @media screen and (max-width: 767.98px) {
+      display: block;
+    }
+  }
+  .hero__video-cover {
+    position: absolute;
+    top: 0;
+    max-height: 100%;
+    z-index: 5;
+    display: none;
+    @media screen and (max-width: 767.98px) {
+      display: block;
     }
   }
 }

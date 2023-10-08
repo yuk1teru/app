@@ -77,7 +77,6 @@
 
   .hero {
     width: 100%;
-    // max-height: 100vh;
     overflow: hidden;
     position: relative;
     padding-top: 192px;
@@ -102,12 +101,13 @@
       position: relative;
     }
     &__video {
-      height: 153px;
+      // height: 153px;
       overflow: hidden;
       position: absolute;
       top: 50%;
+      left: 50%;
       width: 100%;
-      transform: translateY(-50%);
+      transform: translate(-50%, -50%);
       @media screen and (max-width: 550.02px) {
         margin-top: 41px;
       }
