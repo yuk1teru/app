@@ -87,7 +87,7 @@ button.contact-us-btn {
   cursor: pointer;
   z-index: 20;
   opacity: 0;
-  padding: 15px 32px;
+  padding: 15px 36px;
   @media screen and (min-width: 1023.98px) {
     padding: 20px 66px;
     max-height: none;
@@ -104,10 +104,11 @@ button.contact-us-btn {
   @media screen and (max-width: 767.98px) {
     font-size: 14px;
     top: auto;
-    bottom: 5vh;
+    bottom: 10px;
     right: auto;
     left: 50%;
     transform: translateX(-50%) translate3d(0, 100px, 0);
+    border: 2px solid #4b4a4a;
   }
   &[data-aos^='fade'][data-aos^='fade'] {
     opacity: 1;

@@ -1,5 +1,6 @@
 .case-approach {
-  &__swiper {
+  &__swiper,
+  &__swiper2 {
     display: flex;
     overflow: auto;
     padding: 30px !important;
@@ -29,7 +30,7 @@
     font-weight: 300;
     line-height: 200%;
     margin: 0 auto 100px;
-    max-width: 440px;
+    max-width: 450px;
     letter-spacing: 0.56px;
     @media screen and (min-width: 1023.98px) {
       font-size: 15px;
@@ -131,6 +132,7 @@
     }
   }
   &__slider-img {
+    width: 320px;
     border-radius: 36px;
     box-shadow: 4px 10px 20px 0px rgba(0, 0, 0, 0.25);
 

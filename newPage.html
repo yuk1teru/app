@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.min.css" />
+  </head>
+  <style>
+    /* Could Use thise as well for Individual Controls */
+    video::-webkit-media-controls {
+      display: none;
+    }
+    video::-webkit-media-controls-play-button {
+      display: none;
+    }
+    video::-webkit-media-controls-panel {
+      display: none !important;
+      opacity: 1 !important;
+    }
+    video::-webkit-media-controls-start-playback-button {
+      display: none;
+    }
+    video {
+      width: 100%;
+      position: relative;
+      z-index: 2;
+    }
+    .c-image {
+      width: 100%;
+      height: 200px;
+      position: absolute;
+    }
+    span {
+      width: 100%;
+      max-height: 100%;
+    }
+    img {
+      width: 100%;
+      max-height: 100%;
+    }
+    .hero__bg {
+      z-index: 5;
+    }
+  </style>
+  <body>
+    <div class="hero__bg">
+      <div class="c-image -cover">
+        <span class="c-image_inner" style="background-image: url('')">
+          <img class="c-image_img" alt="Locomotive showreel video" src="./posterhome-2000w.jpg" />
+        </span>
+      </div>
+      <video
+        playsinline
+        muted="true"
+        poster="./posterhome-2000w.jpg"
+        src="https://player.vimeo.com/progressive_redirect/playback/792718372/rendition/720p/file.mp4?loc=external&signature=b0c78c25f2f55ae3f00dca4e07238b15d319799aae345f3fbfce5a8d56c6692e"
+      ></video>
+    </div>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const videoElement = document.querySelector('video');
+        const heroBG = document.querySelector('.hero__bg');
+        videoElement.play();
+        videoElement.addEventListener('play', function () {
+          heroBG.style.zIndex = '1';
+        });
+
+        videoElement.addEventListener('pause', function () {
+          heroBG.style.zIndex = '10';
+        });
+      });
+    </script>
+  </body>
+</html>

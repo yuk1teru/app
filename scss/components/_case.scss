@@ -1,6 +1,7 @@
 .case {
   &__title {
     @extend %title;
+    @extend %slide;
     margin-bottom: 20px;
   }
   &__list {
@@ -34,7 +35,7 @@
   &__img {
     width: 100%;
     margin-bottom: 20px;
-    border-radius: 25px;
+    // border-radius: 25px;
   }
   &__list-title {
     color: $black;
@@ -66,7 +67,6 @@
     font-size: 14px;
     font-weight: 400;
     line-height: 156.1%;
-    letter-spacing: 0.56px;
     margin-bottom: 28px;
     max-width: 77%;
     @media screen and (min-width: 1023.98px) {

@@ -54,6 +54,7 @@
       }
     }
   }
+
   &__contact-us {
     color: $beg;
     font-size: 14px;
@@ -64,7 +65,7 @@
     border-radius: 21px;
     border: 1px solid $beg;
     background: transparent;
-    margin-right: 59px;
+
     margin-top: 14px;
     cursor: pointer;
     @media screen and (min-width: 1023.98px) {
@@ -90,8 +91,8 @@
       padding-top: 184px;
     }
     @media screen and (max-width: 768.02px) {
-      padding-top: clamp(rem(37), ourvw(110), rem(110));
-      padding-bottom: 150px;
+      padding-top: 35px;
+      padding-bottom: 172px;
     }
     @media screen and (max-width: 550.02px) {
       overflow: visible;
@@ -108,7 +109,7 @@
       left: 50%;
       width: 100%;
       transform: translate(-50%, -50%);
-      @media screen and (max-width: 550.02px) {
+      @media screen and (max-width: 767.98px) {
         margin-top: 41px;
       }
     }
@@ -176,37 +177,41 @@
       }
 
       transform-origin: center;
-      animation: rotateClockwise 3s linear forwards;
+      animation: rotateClockwise 60s linear infinite;
       &.rcc {
-        animation: rotateCounterClockwise 3s linear forwards;
+        animation: rotateCounterClockwise 60s linear infinite;
       }
       &.rc20 {
-        animation: rotateClockwise20 3s linear forwards;
+        animation: rotateClockwise 60s linear infinite;
       }
       &.rcc280 {
-        animation: rotateCounterClockwise280 3s linear forwards;
+        animation: rotateCounterClockwise 60s linear infinite;
       }
       &.rc28 {
-        animation: rotateClockwise28 3s linear forwards;
+        animation: rotateClockwise 60s linear infinite;
       }
       &.rcc328 {
-        animation: rotateCounterClockwise328 3s linear forwards;
+        animation: rotateCounterClockwise 60s linear infinite;
       }
     }
   }
 }
-
+.home {
+  .header__contact-us {
+    margin-right: 36px;
+  }
+}
 .header__contact-us {
   color: $beg;
   font-size: 14px;
   font-weight: 700;
   text-transform: capitalize;
   background-color: transparent;
-  padding: 15px 26px;
+  padding: 15px 36px;
   border-radius: 40px;
   border: 1px solid $beg;
   background: transparent;
-  margin-right: 59px;
+
   margin-top: 14px;
   cursor: pointer;
   @media screen and (min-width: 1023.98px) {
@@ -218,77 +223,85 @@
 }
 
 @keyframes rotateClockwise {
-  from {
+  0% {
     transform: rotate(0deg);
-    opacity: 0;
   }
-  to {
-    transform: rotate(45deg);
-    opacity: 1;
-  }
-}
-@keyframes rotateClockwise20 {
-  from {
-    transform: rotate(0deg);
-    opacity: 0;
-  }
-  to {
-    transform: rotate(20deg);
-    opacity: 1;
-  }
-}
-@keyframes rotateClockwise28 {
-  from {
-    transform: rotate(0deg);
-    opacity: 0;
-  }
-  to {
-    transform: rotate(28deg);
-    opacity: 1;
-  }
-}
-@keyframes rotateCounterClockwise280 {
-  from {
-    transform: rotate(0deg);
-    opacity: 0;
-  }
-  to {
-    transform: rotate(-80deg);
-    opacity: 1;
+  100% {
+    transform: rotate(360deg);
   }
 }
 
 @keyframes rotateCounterClockwise {
-  from {
-    transform: rotate(0deg);
-    opacity: 0;
-  }
-  to {
-    transform: rotate(-45deg);
-    opacity: 1;
-  }
-}
-@keyframes rotateCounterClockwise328 {
-  from {
-    transform: rotate(0deg);
-    opacity: 0;
-  }
-  to {
-    transform: rotate(-42deg);
-    opacity: 1;
-  }
-}
-@keyframes videoOpacity {
   0% {
-    opacity: 0;
-  }
-  90% {
-    opacity: 0;
+    transform: rotate(0deg);
   }
   100% {
-    opacity: 1;
+    transform: rotate(-360deg);
   }
 }
+
+// @keyframes rotateClockwise {
+//   from {
+//     transform: rotate(0deg);
+//     opacity: 0;
+//   }
+//   to {
+//     transform: rotate(45deg);
+//     opacity: 1;
+//   }
+// }
+// @keyframes rotateClockwise20 {
+//   from {
+//     transform: rotate(0deg);
+//     opacity: 0;
+//   }
+//   to {
+//     transform: rotate(20deg);
+//     opacity: 1;
+//   }
+// }
+// @keyframes rotateClockwise28 {
+//   from {
+//     transform: rotate(0deg);
+//     opacity: 0;
+//   }
+//   to {
+//     transform: rotate(28deg);
+//     opacity: 1;
+//   }
+// }
+// @keyframes rotateCounterClockwise280 {
+//   from {
+//     transform: rotate(0deg);
+//     opacity: 0;
+//   }
+//   to {
+//     transform: rotate(-80deg);
+//     opacity: 1;
+//   }
+// }
+
+// @keyframes rotateCounterClockwise {
+//   from {
+//     transform: rotate(0deg);
+//     opacity: 0;
+//   }
+//   to {
+//     transform: rotate(-45deg);
+//     opacity: 1;
+//   }
+// }
+// @keyframes rotateCounterClockwise328 {
+//   from {
+//     transform: rotate(0deg);
+//     opacity: 0;
+//   }
+//   to {
+//     transform: rotate(-42deg);
+//     opacity: 1;
+//   }
+// }
+
 @keyframes blink {
   0%,
   49% {

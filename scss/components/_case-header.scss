@@ -5,7 +5,7 @@
     margin-bottom: clamp(rem(70), ourvw(125), rem(145));
   }
   @media screen and (max-width: 767.98px) {
-    padding-top: 40px;
+    padding-top: 30px;
   }
   .header__contact-us {
     color: #4b4a4a;
@@ -26,6 +26,9 @@
     width: 150px;
     @media screen and (max-width: 767.98px) {
       width: 114px;
+    }
+    img {
+      width: 100%;
     }
   }
   &__contact-us {

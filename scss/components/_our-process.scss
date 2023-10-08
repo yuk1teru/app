@@ -35,6 +35,7 @@
   }
   &__main-title {
     @extend %title;
+    @extend %slide;
     margin-bottom: 20px;
     @media screen and (max-width: 1024.02px) {
       padding-left: 25px;

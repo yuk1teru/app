@@ -46,6 +46,7 @@
   }
   &__title {
     @extend %title;
+    @extend %slide;
     margin-bottom: 20px;
     padding-left: calc((100% - clamp(480px, vw(1390), 1390px)) / 2) !important;
     @media screen and (max-width: 550px) {

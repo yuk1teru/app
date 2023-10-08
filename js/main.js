@@ -80,10 +80,8 @@ if (swiper && nextButton && prevButton) {
   }
   updateButtonState();
 }
-// Ініціалізуємо стан кнопок при завантаженні сторінки
 
 //Approach slider
-const approachSlider = document.querySelector('.case-approach__swiper');
 
 function updateIndianTime() {
   const options = {

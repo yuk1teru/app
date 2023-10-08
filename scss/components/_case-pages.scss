@@ -39,20 +39,20 @@
   }
 }
 
-.suena {
+.athena {
   .case {
     &-hero__h1 {
-      color: #ee7739;
+      color: #c5515c;
     }
     &-hero__app {
-      color: #e0bead;
+      color: #dda2a6;
     }
     &-hero__category-item {
-      border: 1px solid #ee7739;
-      color: #ee7739;
+      border: 1px solid #c5515c;
+      color: #c5515c;
     }
     &-hero__overview {
-      background: #ee7739;
+      background: #c5515c;
     }
     &-hero__overview-title {
       color: #f8f2ef;
@@ -68,13 +68,13 @@
     }
     &-approach__img {
       div:nth-child(1) {
-        background-color: #b7585d;
+        background-color: #b4575c;
       }
       div:nth-child(2) {
-        background-color: #f0ede8;
+        background-color: #ebe8e3;
       }
       div:nth-child(3) {
-        background-color: #ee7739;
+        background-color: #425580;
       }
     }
   }
