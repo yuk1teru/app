@@ -108,7 +108,9 @@
       font-size: 15px;
     }
     @media screen and (max-width: 1199.98px) {
-      display: none;
+      // display: none;
+      order: -1;
+      margin-top: 24px;
     }
   }
 }
@@ -122,6 +124,7 @@
     &__wrap {
       display: flex;
       flex-direction: column-reverse;
+      padding-bottom: 25px;
     }
     &__lets {
       text-align: left;
