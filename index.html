@@ -25,6 +25,7 @@
     <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
     <link href="https://api.fontshare.com/v2/css?f[]=satoshi@700,300,400&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Overpass+Mono&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="css/style.min.css" />
   </head>
 
@@ -62,24 +63,7 @@
           <!-- data-aos="fade-up" -->
           <section class="hero" data-aos="fade-up">
             <div class="hero__wrapper">
-              <div class="hero__video">
-                <video
-                  class="hero__video-mobile"
-                  src="./images/hero/mobile.mp4"
-                  preload="auto"
-                  playsinline
-                  muted
-                ></video>
-                <video
-                  class="hero__video-desktop"
-                  src="./images/hero/desktop.mp4"
-                  preload="auto"
-                  autoplay
-                  playsinline
-                  muted
-                ></video>
-                <img class="hero__video-cover" src="./images/hero/mobile.png" alt="" />
-              </div>
+              <div class="hero__video"></div>
               <h1 class="hero__title">
                 <span>We Design Websites</span>
                 <span>More Gorgeous than Ryan Gosling.</span>
@@ -684,7 +668,9 @@
         <div class="container">
           <div class="footer__wrap">
             <div class="footer__contacts">
-              <a class="footer__email" href="mailto:hey@sisyphusstudio.in">hey@sisyphusstudio.in</a>
+              <div class="footer__email">
+                <a href="mailto:hey@sisyphusstudio.in">hey@sisyphusstudio.in</a>
+              </div>
               <div class="footer__tel-wrapp">
                 <a class="footer__tel" href="tel:+">Book a call</a>
               </div>

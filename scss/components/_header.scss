@@ -102,13 +102,13 @@
       position: relative;
     }
     &__video {
-      // height: 153px;
+      height: 153px;
       overflow: hidden;
       position: absolute;
       top: 50%;
-      left: 50%;
+      // left: 50%;
       width: 100%;
-      transform: translate(-50%, -50%);
+      transform: translateY(-50%);
       @media screen and (max-width: 767.98px) {
         margin-top: 41px;
       }
